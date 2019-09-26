@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ben Wireman</title>
 
-{% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
-    <!--[if lt IE 9]>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ben Wireman</title>
+
+  {% seo %}
+  <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+  <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
-        
-        {% if site.logo %}
-          <img src="{{site.logo | relative_url}}" alt="Logo" />
-        {% endif %}
+</head>
 
-        <p class="downloads">
+<body>
+  <div class="wrapper">
+    <header>
+      <h1><a href="{{ "/" | absolute_url }}">{{ site.title | default: site.github.repository_name }}</a></h1>
+
+      {% if site.logo %}
+      <img src="{{site.logo | relative_url}}" alt="Logo" />
+      {% endif %}
+
+      <p class="downloads">
+        <a href="https://www.linkedin.com/in/benjamin-wireman-1342bb127/">Linkdin</a><br>
         <a href="https://drive.google.com/file/d/1DKL7oCTEP1Tr9kf0-YFWScJGR7nVMPvx/view">Résume</a> |
         <a href="https://twitter.com/BenWireman">Twitter</a> |
-        <a href="https://www.linkedin.com/in/benjamin-wireman-1342bb127/">Linkdin</a><br>
         <a href="{{ site.github.owner_url }}">GitHub</a> |
-        <a href="mailto:bwireman1@gmail.com">Email</a></p>
+        <a href="mailto:bwireman1@gmail.com">Email</a>
+      
+      </p>
+      
+      <br>
 
-      </header>
-      <section>
+      <H3> Software Engineer, Half-Elf Sorcerer, Cyber Security Fan, and Kubernetes cynic </H3>
+
+      <p>
+        Software Engineer at [Censys](https://censys.io)
+        BS Computer Science, University of Michigan
+      </p>
+
+    </header>
+    <section>
 
       {{ content }}
 
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages <br> Modified from theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
-  </body>
+    </section>
+    <footer>
+      <p><small>Hosted on GitHub Pages <br> Modified from theme by <a
+            href="https://github.com/orderedlist">orderedlist</a></small></p>
+    </footer>
+  </div>
+  <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+</body>
+
 </html>

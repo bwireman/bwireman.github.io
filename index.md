@@ -1,8 +1,3 @@
-### Software Engineer, Half-Elf Sorcerer, Cyber Security Fan, and Kubernetes cynic
-
-Software Engineer at [Censys](https://censys.io)    
-BS Computer Science, University of Michigan
-
 Past Work Experience
 ------
 ### University Of Michigan, College of Engineering
@@ -26,3 +21,4 @@ running in the future.
 *June 2017 – August 2017*   
 I used technologies like `.NET`, `SQL`, `C#` and `ElasticSearch` to help rebuild the company's internal project
 tracking site. 
+
