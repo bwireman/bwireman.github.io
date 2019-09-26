@@ -1,10 +1,10 @@
+### Software Engineer, Half-Elf Sorcerer, Cyber Security Fan, and Kubernetes cynic
+
 Software Engineer at [Censys](https://censys.io)    
 BS Computer Science, University of Michigan
 
 Past Work Experience
 ------
-<br>
-
 ### University Of Michigan, College of Engineering
 **Introduction to Computer Security IA, EECS 388**   
 *August 2018 - April 2019*   
@@ -26,8 +26,3 @@ running in the future.
 *June 2017 – August 2017*   
 I used technologies like `ASP`, `SQL`, `C#` and `ElasticSearch` to help rebuild the company's internal project
 tracking site. 
-
-[Résume](https://drive.google.com/file/d/1DKL7oCTEP1Tr9kf0-YFWScJGR7nVMPvx/view) | 
-[Twitter](https://twitter.com/BenWireman) |
-[Linkdin](https://www.linkedin.com/in/benjamin-wireman-1342bb127/) | 
-[Email](mailto:bwireman1@gmail.com)
