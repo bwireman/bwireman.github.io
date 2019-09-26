@@ -1,5 +1,5 @@
-Past Work Experience
-------
+## Work Experience
+---
 ### University Of Michigan, College of Engineering
 **Introduction to Computer Security IA, EECS 388**   
 *August 2018 - April 2019*   
@@ -22,3 +22,22 @@ running in the future.
 I used technologies like `.NET`, `SQL`, `C#` and `ElasticSearch` to help rebuild the company's internal project
 tracking site. 
 
+## Programming Languages
+---
+- C/C++
+- GO
+- Java
+- Python
+- Javascript
+
+## Other Technologies
+---
+- Linux
+- Kubernetes
+- Docker
+- ElasticSearch
+- Flask
+- Nginx
+- Google Cloud Platform
+- Apache Beam & Airflow
+- Bash
