@@ -2,9 +2,12 @@
 ---
 
 @import "{{ site.theme }}";
-a:hover {
+small-link {
+    font-weight: bold;
+}
+
+small-link:hover {
     color: #1f4e79;
-    font-weight: normal;
 }
 
 .links {
