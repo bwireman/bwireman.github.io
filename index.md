@@ -27,6 +27,7 @@ tracking site.
 - C/C++
 - GO
 - Java
+- C#
 - Python
 - Javascript
 
@@ -41,3 +42,5 @@ tracking site.
 - Google Cloud Platform
 - Apache Beam & Airflow
 - Bash
+- AngularJS
+- React
