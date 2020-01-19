@@ -19,8 +19,7 @@ running in the future.
 ### Tyler Technologies, Courts & Justice
 **Development Intern**   
 *June 2017 – August 2017*   
-I used technologies like `.NET`, `SQL`, `C#` and `ElasticSearch` to help rebuild the company's internal project
-tracking site. 
+I used technologies like `.NET`, `SQL`, `C#` and `ElasticSearch` to help rebuild the company's internal project tracking site. 
 
 ## Programming Languages
 ---
