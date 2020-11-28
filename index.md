@@ -19,14 +19,15 @@ running in the future.
 ### Tyler Technologies, Courts & Justice
 **Development Intern**   
 *June 2017 – August 2017*   
-I used technologies like `.NET`, `SQL`, `C#` and `ElasticSearch` to help rebuild the company's internal project tracking site. 
+I used `.NET`, `MSSQL`, `AngularJS` and `ElasticSearch` to help rebuild the company's internal project tracking site. 
 
 ## Programming Languages
 ---
 - C/C++
 - GO
 - Java
-- C#
+- Scala
+- Elixir
 - Python
 - Javascript
 
@@ -41,5 +42,3 @@ I used technologies like `.NET`, `SQL`, `C#` and `ElasticSearch` to help rebuild
 - Google Cloud Platform
 - Apache Beam & Airflow
 - Bash
-- AngularJS
-- React
