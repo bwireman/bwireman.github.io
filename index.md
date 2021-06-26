@@ -1,5 +1,14 @@
 ## Work Experience
 ---
+### Censys, Inc
+**Software Engineer**   
+*August 2019 - June 2021*   
+Worked to develop micro-services and ETL pipelines to ingest and process our data. Developed custom schema generation and helped to maintain our search engine. 
+
+**Software Engineering Intern**   
+*May 2019 - August 2019*   
+Helped develop scanners for the Censys search engine.
+
 ### University Of Michigan, College of Engineering
 **Introduction to Computer Security IA, EECS 388**   
 *August 2018 - April 2019*   
@@ -23,12 +32,12 @@ I used `.NET`, `MSSQL`, `AngularJS` and `ElasticSearch` to help rebuild the comp
 
 ## Programming Languages
 ---
-- C/C++
 - GO
 - Java
 - Scala
-- Elixir
 - Python
+- C/C++
+- Elixir
 - Javascript
 
 ## Other Technologies
@@ -38,7 +47,7 @@ I used `.NET`, `MSSQL`, `AngularJS` and `ElasticSearch` to help rebuild the comp
 - Docker
 - ElasticSearch
 - Flask
-- Nginx
 - Google Cloud Platform
 - Apache Beam & Airflow
 - Bash
+- Nginx
