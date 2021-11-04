@@ -9,6 +9,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .dark-card {
+      background-color: #363636;
+    }
+
+    .dark-card>.card-content>.title,
+    .dark-card>.card-content>.subtitle,
+    .dark-card>.card-footer>.card-footer-item>span,
+    .dark-card>.card-content {
+      color: whitesmoke;
+    }
+  </style>
 </head>
 
 <body>
@@ -34,18 +46,19 @@
                 <img src="{{site.logo | relative_url}}" alt="ME">
               </figure>
             </div>
-            <div class="media-content is-size-5 has-text-justified">
-              I'm a Software Engineer, Half-Elf Sorcerer, and Kubernetes skeptic. Interested in functional programming,
-              cyber security and distributed systems.
+            <div class="media-content is-size-4">
+              I'm a Software Engineer, Half-Elf Sorcerer, and Kubernetes skeptic, interested in functional programming,
+              cyber security and distributed systems. I received a BS in Computer Science from ths University of
+              Michigan.
             </div>
           </div>
         </div>
         <footer class="card-footer">
           <a href="https://www.linkedin.com/in/benjamin-wireman-1342bb127/" class="card-footer-item">
-            <span class="icon is-large has-text-dark"><i class="fab fa-linkedin"></i></span>
+            <span class="icon is-size-2 has-text-dark"><i class="fab fa-linkedin"></i></span>
           </a>
           <a href="https://github.com/bwireman" class="card-footer-item">
-            <span class="icon is-large has-text-dark"><i class="fab fa-github"></i></span>
+            <span class="icon is-size-2 has-text-dark"><i class="fab fa-github"></i></span>
           </a>
         </footer>
       </div>
@@ -82,8 +95,7 @@
               Software Engineer, August 2019 - June 2021
             </p>
             <p>
-              Worked to develop micro-services and ETL pipelines to ingest and process our data. Developed custom
-              schema
+              Worked to develop micro-services and ETL pipelines to ingest and process our data. Developed custom schema
               generation and helped to maintain our search engine.
             </p>
           </div>
@@ -115,8 +127,7 @@
             </p>
             <p>
               I worked as an Instructional Aide for the University’s intro Cyber Security course. The class was an
-              overview
-              of several security topics, including: Web Security, Cyber Forensics, and Shell Injection.
+              overview of several security topics, including: Web Security, Cyber Forensics, and Shell Injection.
             </p>
           </div>
         </div>
@@ -131,12 +142,9 @@
               Global Markets Operations Technology Intern, June 2018 – August 2018
             </p>
             <p>
-              I used the Python library <code class="language-plaintext highlighter-rouge">sci-kit learn</code> to
-              help
-              develop
-              machine learning models. I also worked to develop tools
-              to more easily get machine learning models up and
-              running in the future.
+              I used the Python library <code class="language-plaintext highlighter-rouge">sci-kit learn</code> to help
+              develop machine learning models. I also worked to develop tools to more easily get machine learning models
+              up and running in the future.
             </p>
           </div>
         </div>
@@ -166,45 +174,86 @@
     <div class="column is-two-fifths">
       <section class="section">
         <h1 class="title">λ Programming Languages</h1>
+        <div class="content">
+          <ul>
+            <li>Go</li>
+            <li>Java</li>
+            <li>Scala</li>
+            <li>Python</li>
+            <li>C/C++</li>
+            <li>Elixir</li>
+            <li>Javascript</li>
+          </ul>
+        </div>
       </section>
-      <div class="content">
-        <ul>
-          <li>Go</li>
-          <li>Java</li>
-          <li>Scala</li>
-          <li>Python</li>
-          <li>C/C++</li>
-          <li>Elixir</li>
-          <li>Javascript</li>
-        </ul>
-      </div>
 
       <section class="section">
         <h1 class="title">
           <span class="icon is-large has-text-dark"><i class="fas fa-server"></i></span>
           Technologies
         </h1>
+        <div class="content">
+          <ul>
+            <li>Linux</li>
+            <li>Docker</li>
+            <li>Django</li>
+            <li>Kubernetes</li>
+            <li>Flask</li>
+            <li>Phoenix</li>
+            <li>ElasticSearch</li>
+            <li>Google Cloud Platform</li>
+            <li>Apache Beam & Airflow</li>
+            <li>Bash</li>
+            <li>Nginx</li>
+          </ul>
+        </div>
       </section>
-      <div class="content">
-        <ul>
-          <li>Linux</li>
-          <li>Docker</li>
-          <li>Django</li>
-          <li>Kubernetes</li>
-          <li>Flask</li>
-          <li>Phoenix</li>
-          <li>ElasticSearch</li>
-          <li>Google Cloud Platform</li>
-          <li>Apache Beam & Airflow</li>
-          <li>Bash</li>
-          <li>Nginx</li>
-        </ul>
-      </div>
-    </div>
 
+      <section class="section">
+        <h1 class="title">
+          <span class="icon is-large has-text-dark"><i class="fas fa-wrench"></i></span>
+          Personal Projects
+        </h1>
+
+        <div class="card dark-card">
+          <div class="card-content">
+            <p class="title">
+              censys_ex
+            </p>
+            <p class="subtitle">
+              Elixir ⚗️ wrapper for Censys Search V2 API
+            </p>
+            <p>
+          </div>
+          <footer class="card-footer">
+            <a href="https://github.com/bwireman/censys_ex" class="card-footer-item">
+              <span class="icon is-size-3"><i class="fab fa-github"></i></span>
+            </a>
+          </footer>
+        </div>
+
+        <br>
+        <div class="card dark-card">
+          <div class="card-content">
+            <p class="title">
+              Delay
+            </p>
+            <p class="subtitle">
+              A dead simple data-structure for delaying side effects. Written in the excellent gleam ✨ language, and elixir!
+            </p>
+            <p>
+          </div>
+          <footer class="card-footer">
+            <a href="https://github.com/bwireman/kickflip" class="card-footer-item">
+              <span class="icon is-size-3"><i class="fab fa-github"></i></span>
+            </a>
+          </footer>
+        </div>
+    </div>
+    </section>
 
   </div>
-
+  </div>
 </body>
 
 </html>
