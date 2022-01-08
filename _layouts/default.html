@@ -20,6 +20,20 @@
     .dark-card>.card-content {
       color: whitesmoke;
     }
+
+    @media screen and (min-width: 769px) {
+      .mobile-image {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .desktop-image {
+        display: none;
+        visibility: hidden;
+      }
+    }
   </style>
 </head>
 
@@ -39,9 +53,14 @@
   <div class="columns is-centered">
     <div class="column is-four-fifths">
       <div class="card">
+        <div class="card-image mobile-image">
+          <figure class="image">
+            <img src="{{site.logo | relative_url}}" alt="ME">
+          </figure>
+        </div>
         <div class="card-content">
           <div class="media">
-            <div class="media-left">
+            <div class="desktop-image media-left">
               <figure class="image is-128x128">
                 <img class="is-rounded" src="{{site.logo | relative_url}}" alt="ME">
               </figure>
@@ -226,6 +245,7 @@
             <p class="subtitle">
               Elixir ⚗️ wrapper for Censys Search V2 API
             </p>
+            <i class="far fa-star"> 4</i>
           </div>
           <footer class="card-footer">
             <a href="https://github.com/bwireman/censys_ex" class="card-footer-item">
@@ -243,6 +263,7 @@
             <p class="subtitle">
               WIP protobuf support for Gleam ✨, written in Go
             </p>
+            <i class="far fa-star"> 6</i>
           </div>
           <footer class="card-footer">
             <a href="https://github.com/bwireman/gleam_pb" class="card-footer-item">
