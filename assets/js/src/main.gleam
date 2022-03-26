@@ -28,4 +28,7 @@ pub fn main() {
 
   starcount("bwireman", "censys_ex", 4)
   |> promise.map(set_stars("censys-ex-stars", _))
+
+  starcount("bwireman", "esgleam", 0)
+  |> promise.map(set_stars("esgleam-stars", _))
 }
