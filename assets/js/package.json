@@ -1,6 +1,11 @@
 {
-  "dependencies": {},
+  "dependencies": {
+    "esbuild": "^0.14.28"
+  },
   "devDependencies": {
-    "esbuild": "^0.14.27"
+    "esgleam": "^0.1.0"
+  },
+  "scripts": {
+    "build": "rm out.js && gleam clean && node build.mjs"
   }
 }
