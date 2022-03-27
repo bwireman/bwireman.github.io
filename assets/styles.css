@@ -1,0 +1,26 @@
+@import "js/node_modules/bulma/css/bulma.min.css";
+
+.dark-card {
+    background-color: #363636;
+}
+
+.dark-card > .card-content > .title,
+.dark-card > .card-content > .subtitle,
+.dark-card > .card-footer > .card-footer-item > span,
+.dark-card > .card-content {
+    color: whitesmoke;
+}
+
+@media screen and (min-width: 769px) {
+    .mobile-image {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-image {
+        display: none;
+        visibility: hidden;
+    }
+}

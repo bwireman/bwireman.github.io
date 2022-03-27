@@ -1,11 +1,12 @@
 {
   "dependencies": {
+    "bulma": "^0.9.3",
     "esbuild": "^0.14.28"
   },
   "devDependencies": {
     "esgleam": "^0.1.0"
   },
   "scripts": {
-    "build": "rm out.js && gleam clean && node build.mjs"
+    "build": "rm -rf out && gleam clean && node build.mjs"
   }
 }
