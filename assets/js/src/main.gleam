@@ -1,34 +1,31 @@
 import gleam/javascript/array
 import gleam/javascript/promise
 
-external type Stargazer
-
-external fn get_stargazers(
-  username: String,
-  repo: String,
-) -> promise.Promise(array.Array(Stargazer)) =
-  "./ffi.mjs" "get_starsgazers"
-
-external fn set_stars(id: String, star_count: Int) -> Nil =
-  "./ffi.mjs" "set_stars"
-
-fn starcount(
-  username: String,
-  repo: String,
-  fallback: Int,
-) -> promise.Promise(Int) {
-  get_stargazers(username, repo)
-  |> promise.map(array.length)
-  |> promise.rescue(fn(_ignore) { fallback })
+pub type Repo {
+  Repo(name: String, stargazers_count: Int)
+  StarCount(stargazers_count: Int)
 }
 
+external fn get_repos(username: String) -> promise.Promise(array.Array(Repo)) =
+  "./ffi.mjs" "get_repos"
+
+external fn set_stars(id: String, repo: Repo) -> Nil =
+  "./ffi.mjs" "set_stars"
+
+external fn find(repos: array.Array(Repo), name: String, default: Repo) -> Repo =
+  "./ffi.mjs" "find"
+
 pub fn main() {
-  starcount("bwireman", "gleam_pb", 12)
-  |> promise.map(set_stars("gleam-pb-stars", _))
+  get_repos("bwireman")
+  |> promise.rescue(fn(_) { array.from_list([]) })
+  |> promise.map(fn(repos) {
+    find(repos, "gleam_pb", StarCount(12))
+    |> set_stars("gleam-pb-stars", _)
 
-  starcount("bwireman", "censys_ex", 4)
-  |> promise.map(set_stars("censys-ex-stars", _))
+    find(repos, "censys_ex", StarCount(4))
+    |> set_stars("censys-ex-stars", _)
 
-  starcount("bwireman", "esgleam", 0)
-  |> promise.map(set_stars("esgleam-stars", _))
+    find(repos, "esgleam", StarCount(5))
+    |> set_stars("esgleam-stars", _)
+  })
 }

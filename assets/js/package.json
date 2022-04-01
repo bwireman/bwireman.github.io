@@ -4,6 +4,7 @@
     "esbuild": "^0.14.29"
   },
   "devDependencies": {
+    "esbuild-sass-plugin": "^2.2.6",
     "esgleam": "^0.2.0"
   },
   "scripts": {

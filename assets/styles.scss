@@ -1,0 +1,105 @@
+@import "js/node_modules/bulma/bulma.sass";
+
+$golang: #00add8;
+$elixir: #6e4a7e;
+$gleam: #ffaff3;
+$typescript: #2b7489;
+$javascript: #f1e05a;
+$dark: #363636;
+
+.hoverable {
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        box-shadow: 10px 10px 5px #757373;
+        transform: scale(1.05);
+    }
+}
+
+.card-footer-item:hover {
+    background-color: whitesmoke;
+}
+
+.card-footer-item,
+.card-footer-item .icon,
+.card-footer-item .icon .fab {
+    transition: all 0.35s ease-in-out;
+}
+
+.card-footer-item:hover .icon .fab {
+    color: $dark;
+}
+
+.lang-footer {
+    border-top-width: 0em;
+    animation: wipe 3s ease alternate infinite;
+
+    &.golang {
+        background: linear-gradient(to right, $golang, $elixir);
+    }
+
+    &.elixir {
+        background: linear-gradient(to right, $dark 10%, $elixir 75%, whitesmoke);
+    }
+
+    &.gleam {
+        background: linear-gradient(to right, $typescript, $gleam, $javascript);
+    }
+}
+
+.dark-card {
+    background-color: $dark;
+
+    > .card-content > .title,
+    > .card-content > .subtitle,
+    > .card-footer > .card-footer-item > span,
+    > .card-content {
+        color: whitesmoke;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mobile-image {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-image {
+        display: none;
+        visibility: hidden;
+    }
+}
+.enter {
+    overflow: hidden;
+    position: relative;
+
+    animation: enter 1.2s ease;
+    @keyframes enter {
+        0% {
+            transform: translateY(70%);
+            opacity: 30%;
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+}
+
+.enter-b {
+    overflow: hidden;
+    position: relative;
+
+    animation: enter-b 1.2s ease;
+
+    @keyframes enter-b {
+        0% {
+            opacity: 30%;
+            transform: translateY(50%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+}
