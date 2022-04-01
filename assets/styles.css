@@ -1,5 +1,23 @@
 @import "js/node_modules/bulma/css/bulma.min.css";
 
+.hoverable {
+    transition: all 0.2s ease-in-out;
+}
+
+.hoverable:hover {
+    box-shadow: 10px 10px 5px #757373;
+    transform: scale(1.05);
+}
+
+.card-footer-item:hover {
+    background-color: whitesmoke;
+}
+
+
+.card-footer-item:hover .icon .fab {
+    color: #363636;
+}
+
 .dark-card {
     background-color: #363636;
 }
