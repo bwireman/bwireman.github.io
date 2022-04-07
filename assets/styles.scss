@@ -8,10 +8,10 @@ $javascript: #f1e05a;
 $dark: #363636;
 
 .hoverable {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.35s ease-in-out;
 
     &:hover {
-        box-shadow: 10px 10px 5px #757373;
+        box-shadow: 5px 5px 2.5px #757373;
         transform: scale(1.05);
     }
 }
@@ -39,11 +39,20 @@ $dark: #363636;
     }
 
     &.elixir {
-        background: linear-gradient(to right, $dark 10%, $elixir 75%, whitesmoke);
+        background: linear-gradient(to right, $dark 2%, $elixir, $dark 98%);
     }
 
     &.gleam {
         background: linear-gradient(to right, $typescript, $gleam, $javascript);
+    }
+
+    &.dark {
+        color: whitesmoke;
+        background-color: $dark;
+
+        > .card-footer-item > span > i {
+            color: whitesmoke;
+        }
     }
 }
 
