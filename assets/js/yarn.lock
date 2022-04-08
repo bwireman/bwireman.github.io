@@ -177,9 +177,9 @@ esbuild@^0.14.13, esbuild@^0.14.29:
     esbuild-windows-arm64 "0.14.29"
 
 esgleam@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/esgleam/-/esgleam-0.2.0.tgz#03064622b7c7dbe9c045502ac7f65fc207ad504a"
-  integrity sha512-c/Dw/lmvR2rn9IZ8R2QvgbFaNq8wMmFfafQdEvBt8ireO+QOGH+7Pt5qEAwKAMXe32yVehByHXOCn8vW1Q0+gg==
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/esgleam/-/esgleam-0.2.1.tgz#2c6b994d37b795c385660c905f013435d32ebb78"
+  integrity sha512-7e883zdgt9NrORmnLjwvKlKr+V7FnZrwMfnm4mfd1RhVIEkefH5rTd4ihvAtymiPEIW5jAP0+IBmeYuEiHIbhg==
   dependencies:
     toml "^3.0.0"
 
