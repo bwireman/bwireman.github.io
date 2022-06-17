@@ -2,5 +2,8 @@ name = "js"
 version = "0.1.0"
 
 [dependencies]
-gleam_stdlib = "~> 0.21"
+gleam_stdlib = "~> 0.22"
 gleam_javascript = "~> 0.1"
+
+[javascript]
+typescript_declarations = true
