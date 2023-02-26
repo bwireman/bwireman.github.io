@@ -3,6 +3,7 @@
   import { onMount } from "svelte";
   import { getRepos, repos } from "./assets/hub";
   import Project from "./lib/Project.svelte";
+  import { go, typescript, elixir } from "svelte-highlight/languages";
 
   onMount(async () => {
     repos.set(await getRepos("bwireman"));
@@ -217,6 +218,10 @@
         lang="golang"
         repo="gleam_pb"
         star_count_fallback={14}
+        language={go}
+        snippetStart={92}
+        snippetEnd={465}
+        snippet="main/pkg/gleam/gpb.go"
       />
 
       <br />
@@ -228,6 +233,10 @@
         repo="censys_ex"
         packageUrl="https://hex.pm/packages/censys_ex/"
         star_count_fallback={4}
+        language={elixir}
+        snippet="main/lib/api/paginate.ex"
+        snippetStart={1000}
+        snippetEnd={1500}
       />
 
       <br />
@@ -239,6 +248,10 @@
         repo="esgleam"
         packageUrl="https://www.npmjs.com/package/esgleam"
         star_count_fallback={7}
+        language={typescript}
+        snippet="main/index.ts"
+        snippetStart={1050}
+        snippetEnd={1495}
       />
     </section>
   </div>

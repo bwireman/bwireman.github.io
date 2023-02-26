@@ -8,7 +8,7 @@ interface Repo {
 export const repos: Writable<Repo[]> = writable([]);
 
 export async function getRepos(username: string): Promise<Repo[]> {
-    return await fetch(`https://api.github.com/users/${username}/repos`)
+    return fetch(`https://api.github.com/users/${username}/repos`)
         .then(r => r.json())
 }
 
@@ -20,4 +20,4 @@ export async function getStars(repos: Repo[], name: string, fallback: number): P
     }
 
     return fallback;
-};
+}
