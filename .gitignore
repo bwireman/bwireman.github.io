@@ -1,3 +1,6 @@
 _site/
 Gen-index.md
 .vscode
+node_modules/
+.vite
+dist
