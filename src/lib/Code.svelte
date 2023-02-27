@@ -9,19 +9,22 @@
 
   $: code = "";
   let i = 0;
-
   let writer;
-
   onMount(() => {
     writer = setInterval(() => {
       code = source.substring(0, i);
-
       i += 5;
-    }, 25);
+
+      if (code.length >= source.length) {
+        clearInterval(writer);
+      }
+    }, 35);
   });
 
   onDestroy(() => {
-    clearInterval(writer);
+    if (writer) {
+      clearInterval(writer);
+    }
   });
 </script>
 
@@ -29,4 +32,6 @@
   {@html theme}
 </svelte:head>
 
-<Highlight {language} {code} />
+<div>
+  <Highlight --langtag-color="whitesmoke" langtag={true} {language} {code} />
+</div>

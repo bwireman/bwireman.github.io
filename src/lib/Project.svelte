@@ -35,20 +35,22 @@
     <p class="title">{title}</p>
     <p class="subtitle">{description}</p>
     {#await getStars($repos, repo, star_count_fallback)}
-      <div class="loader" id="gleam-pb-stars" />
+      <div class="loader" />
     {:then star_count}
       <i class="far fa-star">{star_count}</i>
     {/await}
 
-    {#if showSnippet}
-      {#await getSnippet(repo, snippet, snippetStart, snippetEnd)}
-        <div class="loader" id="gleam-pb-stars" />
-      {:then source}
+    {#await getSnippet(repo, snippet, snippetStart, snippetEnd)}
+      {#if showSnippet}
+        <div class="loader" />
+      {/if}
+    {:then source}
+      {#if showSnippet}
         <div in:slide out:slide>
           <Code {language} {source} />
         </div>
-      {/await}
-    {/if}
+      {/if}
+    {/await}
   </div>
   <footer class={`card-footer lang-footer ${lang}`}>
     <a href={`https://github.com/bwireman/${repo}`} class="card-footer-item">
@@ -61,7 +63,7 @@
     {/if}
     <!-- svelte-ignore a11y-missing-attribute -->
     <a on:keypress={expand} on:click={expand} class="card-footer-item">
-      <span class="icon is-size-3"><i class="fa-solid fa-code" /></span>
+      <span class="icon is-size-5"><i class="fa-solid fa-code" /></span>
     </a>
   </footer>
 </div>
