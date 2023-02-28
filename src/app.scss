@@ -1,4 +1,5 @@
 @import "node_modules/bulma/bulma.sass";
+@import "@fontsource/jetbrains-mono";
 
 $golang: #00add8;
 $elixir: #6e4a7e;
@@ -6,6 +7,10 @@ $gleam: #ffaff3;
 $typescript: #2b7489;
 $javascript: #f1e05a;
 $dark: #363636;
+
+.hljs {
+  font-family: "JetBrains Mono", monospace;
+}
 
 .hoverable {
   transition: all 0.35s ease-in-out;
@@ -51,7 +56,7 @@ $dark: #363636;
     color: whitesmoke;
     background-color: $dark;
 
-    > .card-footer-item > span > i {
+    >.card-footer-item>span>i {
       color: whitesmoke;
     }
   }
@@ -60,10 +65,10 @@ $dark: #363636;
 .dark-card {
   background-color: $dark;
 
-  > .card-content > .title,
-  > .card-content > .subtitle,
-  > .card-footer > .card-footer-item > span,
-  > .card-content {
+  >.card-content>.title,
+  >.card-content>.subtitle,
+  >.card-footer>.card-footer-item>span,
+  >.card-content {
     color: whitesmoke;
   }
 }

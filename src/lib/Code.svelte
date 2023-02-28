@@ -32,6 +32,4 @@
   {@html theme}
 </svelte:head>
 
-<div>
-  <Highlight --langtag-color="whitesmoke" langtag={true} {language} {code} />
-</div>
+<Highlight --langtag-color="whitesmoke" langtag={true} {language} {code} />
