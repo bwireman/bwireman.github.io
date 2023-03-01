@@ -7,6 +7,7 @@ $gleam: #ffaff3;
 $typescript: #2b7489;
 $javascript: #f1e05a;
 $dark: #363636;
+$orange: #ffae5f;
 
 .hljs {
   font-family: "JetBrains Mono", monospace;
@@ -41,11 +42,11 @@ $dark: #363636;
   animation: wipe 3s ease alternate infinite;
 
   &.golang {
-    background: linear-gradient(to right, $golang, $elixir);
+    background: linear-gradient(to right, $golang, $gleam);
   }
 
   &.elixir {
-    background: linear-gradient(to right, $dark 2%, $elixir, $dark 98%);
+    background: linear-gradient(to right, $dark, $elixir 25% 75%, $orange);
   }
 
   &.gleam {

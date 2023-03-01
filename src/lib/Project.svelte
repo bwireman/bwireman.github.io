@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { repos, getStars } from "../assets/hub";
+  import { repos, getStars } from "../stores/hub";
   import Code from "./Code.svelte";
   import type { LanguageType } from "svelte-highlight/languages";
-  import { getSnippet, snippetShowing } from "../assets/snippets";
+  import { getSnippet, snippetShowing } from "../stores/snippets";
   import { slide } from "svelte/transition";
 
   export let title: string;
@@ -10,7 +10,7 @@
   export let lang: string;
   export let repo: string;
   export let packageUrl = "";
-  export let star_count_fallback: number;
+  export let starCountFallback: number;
   export let language: LanguageType<string>;
   export let snippet: string;
   export let snippetStart = 0;
@@ -34,7 +34,7 @@
   <div class="card-content">
     <p class="title">{title}</p>
     <p class="subtitle">{description}</p>
-    {#await getStars($repos, repo, star_count_fallback)}
+    {#await getStars($repos, repo, starCountFallback)}
       <div class="loader" />
     {:then star_count}
       <i class="far fa-star">{star_count}</i>

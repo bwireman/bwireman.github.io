@@ -1,6 +1,6 @@
 set -ex
 
-rm -rf dist assets
+rm -rf index.html dist assets
 
 yarn check
 yarn format
@@ -11,3 +11,5 @@ mv dist/dev.html index.html
 mv dist/assets* assets
 mv dist* assets
 rm -rf dist
+rm -rf assets/dist
+

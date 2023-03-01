@@ -1,7 +1,7 @@
 <script lang="ts">
   import me from "./me.jpg";
   import { onMount } from "svelte";
-  import { getRepos, repos } from "./assets/hub";
+  import { getRepos, repos } from "./stores/hub";
   import { go, typescript, elixir } from "svelte-highlight/languages";
   import Project from "./lib/Project.svelte";
   import Skills from "./lib/Skills.svelte";
@@ -192,7 +192,7 @@
         description="Protobuf support for Gleam ✨, written in GO"
         lang="golang"
         repo="gleam_pb"
-        star_count_fallback={14}
+        starCountFallback={14}
         language={go}
         snippetStart={92}
         snippetEnd={465}
@@ -207,7 +207,7 @@
         lang="elixir"
         repo="censys_ex"
         packageUrl="https://hex.pm/packages/censys_ex/"
-        star_count_fallback={4}
+        starCountFallback={4}
         language={elixir}
         snippet="main/lib/api/paginate.ex"
         snippetStart={1000}
@@ -222,7 +222,7 @@
         lang="gleam"
         repo="esgleam"
         packageUrl="https://www.npmjs.com/package/esgleam"
-        star_count_fallback={7}
+        starCountFallback={7}
         language={typescript}
         snippet="main/index.ts"
         snippetStart={1050}

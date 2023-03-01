@@ -14,8 +14,7 @@
     <p class="title">{company}</p>
     <p class="subtitle">
       {#each roles as { title, span }}
-        {title}<span class="small"><br />{span}</span>
-        <br />
+        {title}<span class="small"><br />{span}</span><br />
       {/each}
     </p>
     <p>
