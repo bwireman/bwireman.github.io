@@ -6,7 +6,7 @@ export async function getSnippet(repo: string, snippetPath: string, start: numbe
     return fetch(`https://raw.githubusercontent.com/bwireman/${repo}/${snippetPath}`)
         .then(r => r.text())
         .then(source => {
-            if ((end - start) >= source.length) {
+            if (start === 0 && end >= source.length) {
                 return source;
             }
             let res = source.substring(start, end) + "\n\n..."

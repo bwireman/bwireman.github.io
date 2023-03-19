@@ -7,9 +7,7 @@
   import Skills from "./lib/Skills.svelte";
   import Experience from "./lib/Experience.svelte";
 
-  onMount(async () => {
-    repos.set(await getRepos("bwireman"));
-  });
+  onMount(async () => repos.set(await getRepos("bwireman")));
 </script>
 
 <section class="hero is-dark">
@@ -83,7 +81,7 @@
             span: "June 2021 - April 2022",
           },
         ]}
-        description="Doing full stack development for our saas product, using React and Django."
+        description="Doing full stack development for our saas product & managing our authentication/authorization implementations, using React, Django & Phoenix."
       />
 
       <br />
@@ -188,6 +186,20 @@
       </h1>
 
       <Project
+        title="genus"
+        description="Elixir macros for generating TypeScript interfaces"
+        lang="genus"
+        repo="genus"
+        starCountFallback={3}
+        language={elixir}
+        snippet="main/lib/example.ex"
+        snippetStart={510}
+        snippetEnd={1090}
+      />
+
+      <br />
+
+      <Project
         title="gleam_pb"
         description="Protobuf support for Gleam ✨, written in GO"
         lang="golang"
@@ -204,7 +216,7 @@
       <Project
         title="censys_ex"
         description="Elixir ⚗️ wrapper for Censys Search V2 API"
-        lang="elixir"
+        lang="censys_ex"
         repo="censys_ex"
         packageUrl="https://hex.pm/packages/censys_ex/"
         starCountFallback={4}
@@ -222,7 +234,7 @@
         lang="gleam"
         repo="esgleam"
         packageUrl="https://www.npmjs.com/package/esgleam"
-        starCountFallback={7}
+        starCountFallback={8}
         language={typescript}
         snippet="main/index.ts"
         snippetStart={1050}

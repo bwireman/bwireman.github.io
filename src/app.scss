@@ -45,7 +45,11 @@ $orange: #ffae5f;
     background: linear-gradient(to right, $golang, $gleam);
   }
 
-  &.elixir {
+  &.genus {
+    background: linear-gradient(to right, $elixir, $typescript);
+  }
+
+  &.censys_ex {
     background: linear-gradient(to right, $dark, $elixir 25% 75%, $orange);
   }
 
