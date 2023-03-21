@@ -1,23 +1,22 @@
-import { writable, type Writable } from "svelte/store"
+import {writable, type Writable} from "svelte/store"
 
 interface Repo {
-    name: string
-    stargazers_count: number
+  name: string
+  stargazers_count: number
 }
 
-export const repos: Writable<Repo[]> = writable([]);
+export const repos: Writable<Repo[]> = writable([])
 
 export async function getRepos(username: string): Promise<Repo[]> {
-    return fetch(`https://api.github.com/users/${username}/repos`)
-        .then(r => r.json())
+  return fetch(`https://api.github.com/users/${username}/repos`).then(r => r.json())
 }
 
 export async function getStars(repos: Repo[], name: string, fallback: number): Promise<number> {
-    let res = repos.filter(r => r.name == name)
+  const res = repos.filter(r => r.name == name)
 
-    if (res.length > 0) {
-        return res[0].stargazers_count;
-    }
+  if (res.length > 0) {
+    return res[0].stargazers_count
+  }
 
-    return fallback;
+  return fallback
 }

@@ -1,12 +1,12 @@
 <script lang="ts">
   interface Role {
-    title: string;
-    span: string;
+    title: string
+    span: string
   }
 
-  export let company: string;
-  export let roles: Role[];
-  export let description: string;
+  export let company: string
+  export let roles: Role[]
+  export let description: string
 </script>
 
 <div class="card hoverable">

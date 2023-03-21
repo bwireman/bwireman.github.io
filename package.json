@@ -1,5 +1,5 @@
 {
-  "name": "bwireman.github.io-new",
+  "name": "bwireman.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,10 +7,35 @@
     "dev": "rm -f index.html && vite",
     "build": "./scripts/build.sh",
     "preview": "vite preview",
-    "format": "prettier --write '{public,src}/**/*.{css,html,js,svelte}'",
-    "lint": "eslint --fix --quiet src --ext .js,.svelte",
+    "format": "prettier --plugin-search-dir . --write '{public,src}/**/*.{css,html,ts,js,svelte}'",
+    "lint": "eslint --fix --quiet src --ext .ts,.js,.svelte",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "test": "playwright test"
+  },
+  "prettier": {
+    "arrowParens": "avoid",
+    "bracketSpacing": false,
+    "singleQuote": false,
+    "svelteSortOrder": "options-scripts-markup-styles",
+    "trailingComma": "none",
+    "useTabs": false,
+    "tabWidth": 2,
+    "semi": false,
+    "printWidth": 120,
+    "plugins": [
+      "prettier-plugin-svelte"
+    ],
+    "pluginSearchDirs": [
+      "."
+    ],
+    "overrides": [
+      {
+        "files": "*.svelte",
+        "options": {
+          "parser": "svelte"
+        }
+      }
+    ]
   },
   "devDependencies": {
     "@fontsource/jetbrains-mono": "^4.5.12",
@@ -21,6 +46,7 @@
     "@typescript-eslint/parser": "^5.53.0",
     "bulma": "^0.9.4",
     "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "prettier": "^2.8.4",
     "prettier-plugin-svelte": "^2.9.0",

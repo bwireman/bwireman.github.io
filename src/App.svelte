@@ -1,16 +1,16 @@
 <script lang="ts">
-  import me from "./me.jpg";
-  import { onMount } from "svelte";
-  import { getRepos, repos } from "./stores/hub";
+  import me from "./me.jpg"
+  import {onMount} from "svelte"
+  import {getRepos, repos} from "./stores/hub"
 
-  import theme from "svelte-highlight/styles/androidstudio";
-  import { go, typescript, elixir } from "svelte-highlight/languages";
+  import theme from "svelte-highlight/styles/androidstudio"
+  import {go, typescript, elixir} from "svelte-highlight/languages"
 
-  import Project from "./lib/Project.svelte";
-  import Skills from "./lib/Skills.svelte";
-  import Experience from "./lib/Experience.svelte";
+  import Project from "./lib/Project.svelte"
+  import Skills from "./lib/Skills.svelte"
+  import Experience from "./lib/Experience.svelte"
 
-  onMount(async () => repos.set(await getRepos("bwireman")));
+  onMount(async () => repos.set(await getRepos("bwireman")))
 </script>
 
 <svelte:head>
@@ -33,25 +33,17 @@
             </figure>
           </div>
           <div id="self-intro" class="media-content is-size-4">
-            I'm a Software Engineer, Kubernetes skeptic and D&D nerd, interested
-            in functional programming, cyber security and distributed systems. I
-            received a BS in Computer Science from the University of Michigan.
+            I'm a Software Engineer, Kubernetes skeptic and D&D nerd, interested in functional programming, cyber
+            security and distributed systems. I received a BS in Computer Science from the University of Michigan.
           </div>
         </div>
       </div>
       <footer class="card-footer lang-footer dark">
-        <a
-          href="https://www.linkedin.com/in/benjamin-wireman-1342bb127/"
-          class="card-footer-item"
-        >
-          <span class="icon is-size-2 has-text-dark"
-            ><i class="fab fa-linkedin" /></span
-          >
+        <a href="https://www.linkedin.com/in/benjamin-wireman-1342bb127/" class="card-footer-item">
+          <span class="icon is-size-2 has-text-dark"><i class="fab fa-linkedin" /></span>
         </a>
         <a href="https://github.com/bwireman" class="card-footer-item">
-          <span class="icon is-size-2 has-text-dark"
-            ><i class="fab fa-github" /></span
-          >
+          <span class="icon is-size-2 has-text-dark"><i class="fab fa-github" /></span>
         </a>
       </footer>
     </div>
@@ -62,9 +54,7 @@
   <div class="column is-two-fifths">
     <section class="section">
       <h1 class="title">
-        <span class="icon is-large has-text-dark"
-          ><i class="fas fa-briefcase" /></span
-        >
+        <span class="icon is-large has-text-dark"><i class="fas fa-briefcase" /></span>
         Work Experience
       </h1>
 
@@ -73,12 +63,12 @@
         roles={[
           {
             title: "Senior Software Engineer",
-            span: "April 2022 - Now",
+            span: "April 2022 - Now"
           },
           {
             title: "Software Engineer II",
-            span: "June 2021 - April 2022",
-          },
+            span: "June 2021 - April 2022"
+          }
         ]}
         description="Doing full stack development for our saas product & managing our authentication/authorization implementations, using React, Django & Phoenix."
       />
@@ -90,12 +80,12 @@
         roles={[
           {
             title: "Software Engineer",
-            span: "August 2019 - June 2021",
+            span: "August 2019 - June 2021"
           },
           {
             title: "Software Engineer Intern",
-            span: "May 2019 - August 2019",
-          },
+            span: "May 2019 - August 2019"
+          }
         ]}
         description="Worked to develop micro-services, web scanners and ETL pipelines to ingest and process our data. Developed custom schema generation and helped to maintain our search engine."
       />
@@ -106,10 +96,9 @@
         company="University Of Michigan, College of Engineering"
         roles={[
           {
-            title:
-              "Introduction to Computer Security Instructional Aide, EECS 388",
-            span: "August 2018 - April 2019",
-          },
+            title: "Introduction to Computer Security Instructional Aide, EECS 388",
+            span: "August 2018 - April 2019"
+          }
         ]}
         description="I worked as an Instructional Aide for the University's intro Cyber Security course. The class was an overview of several security topics, including: Web Security, Cyber Forensics, and Shell Injection."
       />
@@ -121,8 +110,8 @@
         roles={[
           {
             title: "Global Markets Operations Technology Intern",
-            span: "June 2018 - August 2018",
-          },
+            span: "June 2018 - August 2018"
+          }
         ]}
         description="I used 'sci-kit learn' to help develop machine learning models, & worked to develop tools to more easily get models trained in the future."
       />
@@ -134,8 +123,8 @@
         roles={[
           {
             title: "Development Intern",
-            span: "August 2017 - April 2017",
-          },
+            span: "August 2017 - April 2017"
+          }
         ]}
         description="Helped to rebuild the company's internal project tracking site, using .NET, Angular.JS & Elasticsearch."
       />
@@ -145,22 +134,10 @@
   <div class="column is-two-fifths">
     <section class="section">
       <h1 class="title">λ Programming Languages</h1>
-      <Skills
-        skills={[
-          "Python",
-          "Elixir",
-          "Javascript",
-          "GO",
-          "Java",
-          "Scala",
-          "C/C++",
-        ]}
-      />
+      <Skills skills={["Python", "Elixir", "Javascript", "GO", "Java", "Scala", "C/C++"]} />
 
       <h1 class="title">
-        <span class="icon is-large has-text-dark"
-          ><i class="fas fa-server" /></span
-        >
+        <span class="icon is-large has-text-dark"><i class="fas fa-server" /></span>
         Technologies
       </h1>
       <Skills
@@ -174,13 +151,11 @@
           "ElasticSearch",
           "AWS & Google Cloud Platform",
           "Apache Beam & Airflow",
-          "Bash",
+          "Bash"
         ]}
       />
       <h1 class="title">
-        <span class="icon is-large has-text-dark"
-          ><i class="fas fa-code-branch" /></span
-        >
+        <span class="icon is-large has-text-dark"><i class="fas fa-code-branch" /></span>
         Personal Projects
       </h1>
 

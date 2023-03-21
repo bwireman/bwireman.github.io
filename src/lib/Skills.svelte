@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let skills: string[] = [];
+  export let skills: string[] = []
 </script>
 
 <div class="content is-size-6">

@@ -1,33 +1,33 @@
 <script lang="ts">
-  import { repos, getStars } from "../stores/hub";
-  import Code from "./Code.svelte";
-  import type { LanguageType } from "svelte-highlight/languages";
-  import { getSnippet, snippetShowing } from "../stores/snippets";
-  import { slide } from "svelte/transition";
+  import {repos, getStars} from "../stores/hub"
+  import Code from "./Code.svelte"
+  import type {LanguageType} from "svelte-highlight/languages"
+  import {getSnippet, snippetShowing} from "../stores/snippets"
+  import {slide} from "svelte/transition"
 
-  export let title: string;
-  export let description: string;
-  export let lang: string;
-  export let repo: string;
-  export let packageUrl = "";
-  export let starCountFallback: number;
-  export let language: LanguageType<string>;
-  export let snippet: string;
-  export let snippetStart = 0;
-  export let snippetEnd = 500;
+  export let title: string
+  export let description: string
+  export let lang: string
+  export let repo: string
+  export let packageUrl = ""
+  export let starCountFallback: number
+  export let language: LanguageType<string>
+  export let snippet: string
+  export let snippetStart = 0
+  export let snippetEnd = 500
 
-  let hide = true;
-  $: showSnippet = $snippetShowing == repo && !hide;
+  let hide = true
+  $: showSnippet = $snippetShowing == repo && !hide
 
   const expand = () => {
     if (showSnippet) {
-      hide = true;
+      hide = true
     } else {
-      hide = false;
+      hide = false
     }
 
-    snippetShowing.set(repo);
-  };
+    snippetShowing.set(repo)
+  }
 </script>
 
 <div class="card dark-card">
@@ -62,12 +62,7 @@
       </a>
     {/if}
     <!-- svelte-ignore a11y-missing-attribute -->
-    <a
-      id={`${repo}-toggle-snippet`}
-      on:keypress={expand}
-      on:click={expand}
-      class="card-footer-item"
-    >
+    <a id={`${repo}-toggle-snippet`} on:keypress={expand} on:click={expand} class="card-footer-item">
       <span class="icon is-size-5"><i class="fa-solid fa-code" /></span>
     </a>
   </footer>
