@@ -217,3 +217,55 @@
     </section>
   </div>
 </div>
+
+<style lang="scss">
+  @media screen and (min-width: 769px) {
+    .mobile-image {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .desktop-image {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  .enter {
+    overflow: hidden;
+    position: relative;
+
+    animation: enter 1.2s ease;
+
+    @keyframes enter {
+      0% {
+        transform: translateY(70%);
+        opacity: 30%;
+      }
+
+      100% {
+        transform: translateY(0%);
+      }
+    }
+  }
+
+  .enter-b {
+    overflow: hidden;
+    position: relative;
+
+    animation: enter-b 1.2s ease;
+
+    @keyframes enter-b {
+      0% {
+        opacity: 30%;
+        transform: translateY(50%);
+      }
+
+      100% {
+        transform: translateY(0%);
+      }
+    }
+  }
+</style>

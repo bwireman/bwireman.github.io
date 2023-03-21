@@ -1,4 +1,14 @@
-@import "node_modules/bulma/bulma.sass";
+@import "bulma/sass/base/_all.sass";
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/layout/_all.sass";
+@import "bulma/sass/elements/_all.sass";
+
+@import "bulma/sass/components/card.sass";
+@import "bulma/sass/components/media.sass";
+
+@import "bulma/sass/grid/columns.sass";
+@import "bulma/sass/helpers/typography.sass";
+
 @import "@fontsource/jetbrains-mono/400.css";
 
 $golang: #00add8;
@@ -76,61 +86,6 @@ $orange: #ffae5f;
   >.card-content {
     color: whitesmoke;
   }
-}
-
-@media screen and (min-width: 769px) {
-  .mobile-image {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .desktop-image {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-.enter {
-  overflow: hidden;
-  position: relative;
-
-  animation: enter 1.2s ease;
-
-  @keyframes enter {
-    0% {
-      transform: translateY(70%);
-      opacity: 30%;
-    }
-
-    100% {
-      transform: translateY(0%);
-    }
-  }
-}
-
-.enter-b {
-  overflow: hidden;
-  position: relative;
-
-  animation: enter-b 1.2s ease;
-
-  @keyframes enter-b {
-    0% {
-      opacity: 30%;
-      transform: translateY(50%);
-    }
-
-    100% {
-      transform: translateY(0%);
-    }
-  }
-}
-
-.small {
-  font-size: small;
-  margin-top: 0%;
 }
 
 code,

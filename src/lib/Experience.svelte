@@ -22,3 +22,10 @@
     </p>
   </div>
 </div>
+
+<style lang="scss">
+  .small {
+    font-size: small;
+    margin-top: 0%;
+  }
+</style>
