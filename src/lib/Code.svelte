@@ -2,12 +2,11 @@
   import { onDestroy, onMount } from "svelte";
   import Highlight from "svelte-highlight";
   import type { LanguageType } from "svelte-highlight/languages";
-  import theme from "svelte-highlight/styles/androidstudio";
 
   export let language: LanguageType<string>;
   export let source: string;
 
-  $: code = "";
+  let code = "";
   let i = 0;
   let writer;
   onMount(() => {
@@ -27,9 +26,5 @@
     }
   });
 </script>
-
-<svelte:head>
-  {@html theme}
-</svelte:head>
 
 <Highlight --langtag-color="whitesmoke" langtag={true} {language} {code} />

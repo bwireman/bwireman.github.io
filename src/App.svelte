@@ -2,7 +2,10 @@
   import me from "./me.jpg";
   import { onMount } from "svelte";
   import { getRepos, repos } from "./stores/hub";
+
+  import theme from "svelte-highlight/styles/androidstudio";
   import { go, typescript, elixir } from "svelte-highlight/languages";
+
   import Project from "./lib/Project.svelte";
   import Skills from "./lib/Skills.svelte";
   import Experience from "./lib/Experience.svelte";
@@ -10,14 +13,10 @@
   onMount(async () => repos.set(await getRepos("bwireman")));
 </script>
 
-<section class="hero is-dark">
-  <div class="hero-body">
-    <p class="title">Ben Wireman</p>
-    <p class="subtitle">Software Engineer</p>
-  </div>
-</section>
+<svelte:head>
+  {@html theme}
+</svelte:head>
 
-<br />
 <div class="columns enter is-centered">
   <div class="column is-four-fifths">
     <div class="card">

@@ -16,7 +16,7 @@
   export let snippetStart = 0;
   export let snippetEnd = 500;
 
-  $: hide = true;
+  let hide = true;
   $: showSnippet = $snippetShowing == repo && !hide;
 
   const expand = () => {
