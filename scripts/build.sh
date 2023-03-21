@@ -2,6 +2,8 @@ set -ex
 
 rm -rf index.html dist assets
 
+yarn upgrade
+yarn audit
 yarn check
 yarn format
 yarn lint
@@ -13,4 +15,3 @@ mv dist/assets* assets
 mv dist* assets
 rm -rf dist
 rm -rf assets/dist
-
