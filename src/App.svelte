@@ -32,7 +32,7 @@
               <img class="is-rounded" src={me} alt="Me" />
             </figure>
           </div>
-          <div class="media-content is-size-4">
+          <div id="self-intro" class="media-content is-size-4">
             I'm a Software Engineer, Kubernetes skeptic and D&D nerd, interested
             in functional programming, cyber security and distributed systems. I
             received a BS in Computer Science from the University of Michigan.

@@ -4,3 +4,6 @@ Gen-index.md
 node_modules/
 .vite
 dist
+/test-results/
+/playwright-report/
+/playwright/.cache/

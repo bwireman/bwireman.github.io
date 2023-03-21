@@ -47,7 +47,7 @@
     {:then source}
       {#if showSnippet}
         <div in:slide out:slide>
-          <Code {language} {source} />
+          <Code name={repo} {language} {source} />
         </div>
       {/if}
     {/await}
@@ -62,7 +62,12 @@
       </a>
     {/if}
     <!-- svelte-ignore a11y-missing-attribute -->
-    <a on:keypress={expand} on:click={expand} class="card-footer-item">
+    <a
+      id={`${repo}-toggle-snippet`}
+      on:keypress={expand}
+      on:click={expand}
+      class="card-footer-item"
+    >
       <span class="icon is-size-5"><i class="fa-solid fa-code" /></span>
     </a>
   </footer>

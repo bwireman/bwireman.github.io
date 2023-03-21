@@ -3,6 +3,7 @@
   import Highlight from "svelte-highlight";
   import type { LanguageType } from "svelte-highlight/languages";
 
+  export let name: string;
   export let language: LanguageType<string>;
   export let source: string;
 
@@ -27,4 +28,6 @@
   });
 </script>
 
-<Highlight --langtag-color="whitesmoke" langtag={true} {language} {code} />
+<div id={`${name}-snippet`}>
+  <Highlight --langtag-color="whitesmoke" langtag={true} {language} {code} />
+</div>
