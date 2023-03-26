@@ -18,14 +18,8 @@
 
   let hide = true
   $: showSnippet = $snippetShowing == repo && !hide
-
   const expand = () => {
-    if (showSnippet) {
-      hide = true
-    } else {
-      hide = false
-    }
-
+    hide = showSnippet
     snippetShowing.set(repo)
   }
 </script>
