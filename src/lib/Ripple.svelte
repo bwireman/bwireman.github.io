@@ -3,7 +3,7 @@
 
   const gen_size = () => Math.floor(Math.random() * 5) + 2
   const gen_delay = () => Math.random()
-  const gen_duration = () => Math.random() + 0.75
+  const gen_duration = () => Math.random() + 1.25
 
   interface Bubble {
     size: number
@@ -19,7 +19,7 @@
   }
 
   onMount(() => {
-    for (let i = 0; i < 250; i++) {
+    for (let i = 0; i < 200; i++) {
       bubbles[i] = {size: gen_size(), delay: gen_delay(), duration: gen_duration()}
     }
   })
@@ -34,7 +34,7 @@
 <style style="scss">
   .floor {
     bottom: 0;
-    background-color: #x;
+    background-color: #112212;
     place-self: end center;
     position: fixed;
     max-height: 1rem;
@@ -42,6 +42,7 @@
   }
 
   .bounce {
+    left: -1.5rem;
     border-radius: 100%;
     position: fixed;
 
