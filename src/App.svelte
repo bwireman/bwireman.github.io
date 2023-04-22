@@ -9,6 +9,7 @@
   import Project from "./lib/Project.svelte"
   import Skills from "./lib/Skills.svelte"
   import Experience from "./lib/Experience.svelte"
+  import Ripple from "./lib/Ripple.svelte"
 
   onMount(async () => repos.set(await getRepos("bwireman")))
 </script>
@@ -217,6 +218,7 @@
     </section>
   </div>
 </div>
+<Ripple />
 
 <style lang="scss">
   @media screen and (min-width: 769px) {
