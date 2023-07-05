@@ -11,7 +11,14 @@
   import Experience from "./lib/Experience.svelte"
   import Ripple from "./lib/Ripple.svelte"
 
+  let showRipple = false
+
   onMount(async () => repos.set(await getRepos("bwireman")))
+  onMount(() => {
+    setInterval(() => {
+      showRipple = true
+    }, 500)
+  })
 </script>
 
 <svelte:head>
@@ -218,7 +225,10 @@
     </section>
   </div>
 </div>
-<Ripple />
+
+{#if showRipple}
+  <Ripple />
+{/if}
 
 <style lang="scss">
   @media screen and (min-width: 769px) {
