@@ -131,7 +131,7 @@
         roles={[
           {
             title: "Development Intern",
-            span: "August 2017 - April 2017"
+            span: "June 2017 - August 2017"
           }
         ]}
         description="Helped to rebuild the company's internal project tracking site, using .NET, Angular.JS & Elasticsearch."
