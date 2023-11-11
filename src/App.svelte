@@ -142,7 +142,17 @@
   <div class="column is-two-fifths">
     <section class="section">
       <h1 class="title">λ Programming Languages</h1>
-      <Skills skills={["Python", "Elixir", "Javascript", "GO", "Java", "Scala", "C/C++"]} />
+      <Skills
+        skills={[
+          {name: "Python"},
+          {name: "Elixir"},
+          {name: "Javascript"},
+          {name: "GO"},
+          {name: "Java"},
+          {name: "Scala"},
+          {name: "C/C++"}
+        ]}
+      />
 
       <h1 class="title">
         <span class="icon is-large has-text-dark"><i class="fas fa-server" /></span>
@@ -150,16 +160,20 @@
       </h1>
       <Skills
         skills={[
-          "React & Svelte",
-          "Django & Django Rest Framework",
-          "Linux",
-          "Docker",
-          "Kubernetes",
-          "Phoenix",
-          "ElasticSearch",
-          "AWS & Google Cloud Platform",
-          "Apache Beam & Airflow",
-          "Bash"
+          {icon: "fa-solid fa-server", name: "Django & Django Rest Framework"},
+          {icon: "fa-solid fa-server", name: "Phoenix"},
+          {icon: "fa-brands fa-js", name: "React"},
+          {icon: "fa-brands fa-js", name: "Svelte"},
+          {icon: "fa-solid fa-cloud", name: "Kubernetes"},
+          {icon: "fa-solid fa-cloud", name: "AWS"},
+          {icon: "fa-solid fa-cloud", name: "Google Cloud Platform"},
+          {icon: "fa-solid fa-cloud", name: "Terraform"},
+          {icon: "fa-solid fa-server", name: "ElasticSearch"},
+          {icon: "fa-solid fa-angles-right", name: "Apache Beam"},
+          {icon: "fa-solid fa-angles-right", name: "Apache Airflow"},
+          {icon: "fa-solid fa-terminal", name: "Docker"},
+          {icon: "fa-solid fa-terminal", name: "Linux"},
+          {icon: "fa-solid fa-terminal", name: "Bash"}
         ]}
       />
       <h1 class="title">
