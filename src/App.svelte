@@ -6,7 +6,7 @@
   import {onMount} from "svelte"
   import {getRepos, repos} from "./stores/hub"
 
-  import theme from "svelte-highlight/styles/androidstudio"
+  import theme from "svelte-highlight/styles/stackoverflow-dark"
   import {go, typescript, elixir} from "svelte-highlight/languages"
 
   import Project from "./lib/Project.svelte"
@@ -50,10 +50,10 @@
         </div>
       </div>
       <footer class="card-footer lang-footer dark">
-        <a href="https://www.linkedin.com/in/benjamin-wireman-1342bb127/" class="card-footer-item">
+        <a target="_blank" href="https://www.linkedin.com/in/benjamin-wireman-1342bb127/" class="card-footer-item">
           <span class="icon is-size-2 has-text-dark"><i class="fab fa-linkedin" /></span>
         </a>
-        <a href="https://github.com/bwireman" class="card-footer-item">
+        <a target="_blank" href="https://github.com/bwireman" class="card-footer-item">
           <span class="icon is-size-2 has-text-dark"><i class="fab fa-github" /></span>
         </a>
       </footer>
@@ -194,7 +194,8 @@
         starCountFallback={0}
         language={elixir}
         snippet="main/lib/dreamy.ex"
-        snippetEnd={451}
+        snippetStart={140}
+        snippetEnd={457}
       />
 
       <br />
@@ -223,8 +224,8 @@
         starCountFallback={4}
         language={elixir}
         snippet="main/lib/api/paginate.ex"
-        snippetStart={1000}
-        snippetEnd={1500}
+        snippetStart={900}
+        snippetEnd={1452}
       />
 
       <br />
@@ -234,6 +235,7 @@
         description="esbuild plugin for gleam 🌸"
         lang="gleam"
         repo="esgleam"
+        npm={true}
         packageUrl="https://www.npmjs.com/package/esgleam"
         starCountFallback={8}
         language={typescript}
@@ -246,18 +248,17 @@
 </div>
 <footer class="footer">
   <div class="content">
+    <h6>About:</h6>
     <ul>
-      <li>
-        <p>
-          This site uses
-          <span class="icon-text"><span class="icon"><img src={svelte} alt="svelte-logo" /></span> </span>
-          <a target="_blank" class="link" href="https://svelte.dev/">Svelte</a>
-          & <span class="icon-text"><span class="icon"><img src={bulma} alt="bulma-logo" /></span> </span>
-          <a target="_blank" class="link" href="https://bulma.io/">Bulma</a>
-        </p>
-      </li>
-      <li><a target="_blank" class="link" href="https://github.com/bwireman/bwireman.github.io">Repo</a></li>
       <li><a target="_blank" class="link" href={resume}>Resumé</a></li>
+      <li><a target="_blank" class="link" href="https://github.com/bwireman/bwireman.github.io">Repo</a></li>
+      <li>
+        This site is built using
+        <span class="icon-text"><span class="icon"><img src={svelte} alt="svelte-logo" /></span> </span>
+        <a target="_blank" class="link" href="https://svelte.dev/">Svelte</a>
+        & <span class="icon-text"><span class="icon"><img src={bulma} alt="bulma-logo" /></span> </span>
+        <a target="_blank" class="link" href="https://bulma.io/">Bulma</a>
+      </li>
     </ul>
   </div>
 </footer>

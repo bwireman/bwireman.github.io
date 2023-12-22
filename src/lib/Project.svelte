@@ -4,7 +4,8 @@
   import type {LanguageType} from "svelte-highlight/languages"
   import {getSnippet, snippetShowing} from "../stores/snippets"
   import {slide} from "svelte/transition"
-  import {getPackage} from "../hex"
+  import {getPackage as getHex} from "../hex"
+  import {getPackage as getNpm} from "../npm"
 
   export let title: string
   export let description: string
@@ -17,6 +18,7 @@
   export let snippetStart = 0
   export let snippetEnd = 500
   export let hex = false
+  export let npm = false
 
   let hide = true
   $: showSnippet = $snippetShowing == repo && !hide
@@ -40,7 +42,17 @@
       {/if}
 
       {#if hex}
-        {#await getPackage(repo)}
+        {#await getHex(repo)}
+          <div class="loader" />
+        {:then pm}
+          {#if pm}
+            <i class="fa-solid fa-download">&ThinSpace;{pm.downloads_all}</i>
+          {/if}
+        {/await}
+      {/if}
+
+      {#if npm}
+        {#await getNpm(repo)}
           <div class="loader" />
         {:then pm}
           {#if pm}
@@ -49,6 +61,7 @@
         {/await}
       {/if}
     </span>
+
     {#await getSnippet(repo, snippet, snippetStart, snippetEnd)}
       {#if showSnippet}
         <div class="loader" />
@@ -62,11 +75,11 @@
     {/await}
   </div>
   <footer class={`card-footer lang-footer ${lang}`}>
-    <a href={`https://github.com/bwireman/${repo}`} class="card-footer-item">
+    <a target="_blank" href={`https://github.com/bwireman/${repo}`} class="card-footer-item">
       <span class="icon is-size-3"><i class="fab fa-github" /></span>
     </a>
     {#if packageUrl}
-      <a href={packageUrl} class="card-footer-item">
+      <a target="_blank" href={packageUrl} class="card-footer-item">
         <span class="icon is-size-3">📦</span>
       </a>
     {/if}
