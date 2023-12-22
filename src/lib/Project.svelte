@@ -4,17 +4,19 @@
   import type {LanguageType} from "svelte-highlight/languages"
   import {getSnippet, snippetShowing} from "../stores/snippets"
   import {slide} from "svelte/transition"
+  import {getPackage} from "../hex"
 
   export let title: string
   export let description: string
   export let lang: string
   export let repo: string
   export let packageUrl = ""
-  export let starCountFallback: number
+  export let starCountFallback: number | null
   export let language: LanguageType<string>
   export let snippet: string
   export let snippetStart = 0
   export let snippetEnd = 500
+  export let hex = false
 
   let hide = true
   $: showSnippet = $snippetShowing == repo && !hide
@@ -28,12 +30,25 @@
   <div class="card-content">
     <p class="title">{title}</p>
     <p class="subtitle">{description}</p>
-    {#await getStars($repos, repo, starCountFallback)}
-      <div class="loader" />
-    {:then star_count}
-      <i class="far fa-star">{star_count}</i>
-    {/await}
+    <span>
+      {#if starCountFallback}
+        {#await getStars($repos, repo, starCountFallback)}
+          <div class="loader" />
+        {:then star_count}
+          <i class="far fa-star">{star_count}</i>
+        {/await}
+      {/if}
 
+      {#if hex}
+        {#await getPackage(repo)}
+          <div class="loader" />
+        {:then pm}
+          {#if pm}
+            <i class="fa-solid fa-download">&ThinSpace;{pm.downloads_all}</i>
+          {/if}
+        {/await}
+      {/if}
+    </span>
     {#await getSnippet(repo, snippet, snippetStart, snippetEnd)}
       {#if showSnippet}
         <div class="loader" />

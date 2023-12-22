@@ -1,5 +1,8 @@
 <script lang="ts">
   import me from "./me.jpg"
+  import svelte from "./svelte.png"
+  import bulma from "./bulma.png"
+  import resume from "./ben_wireman_resume.pdf"
   import {onMount} from "svelte"
   import {getRepos, repos} from "./stores/hub"
 
@@ -182,15 +185,16 @@
       </h1>
 
       <Project
-        title="genus"
-        description="Elixir macros for generating TypeScript interfaces"
-        lang="genus"
-        repo="genus"
-        starCountFallback={3}
+        title="dreamy 😴"
+        description="Dreamy provides useful macros, functions, types & operators to make elixir even dreamier"
+        lang="dreamy"
+        repo="dreamy"
+        hex={true}
+        packageUrl="https://hex.pm/packages/dreamy/"
+        starCountFallback={0}
         language={elixir}
-        snippet="main/lib/example.ex"
-        snippetStart={510}
-        snippetEnd={1090}
+        snippet="main/lib/dreamy.ex"
+        snippetEnd={451}
       />
 
       <br />
@@ -214,6 +218,7 @@
         description="Elixir ⚗️ wrapper for Censys Search V2 API"
         lang="censys_ex"
         repo="censys_ex"
+        hex={true}
         packageUrl="https://hex.pm/packages/censys_ex/"
         starCountFallback={4}
         language={elixir}
@@ -239,6 +244,23 @@
     </section>
   </div>
 </div>
+<footer class="footer">
+  <div class="content">
+    <ul>
+      <li>
+        <p>
+          This site uses
+          <span class="icon-text"><span class="icon"><img src={svelte} alt="svelte-logo" /></span> </span>
+          <a target="_blank" class="link" href="https://svelte.dev/">Svelte</a>
+          & <span class="icon-text"><span class="icon"><img src={bulma} alt="bulma-logo" /></span> </span>
+          <a target="_blank" class="link" href="https://bulma.io/">Bulma</a>
+        </p>
+      </li>
+      <li><a target="_blank" class="link" href="https://github.com/bwireman/bwireman.github.io">Repo</a></li>
+      <li><a target="_blank" class="link" href={resume}>Resumé</a></li>
+    </ul>
+  </div>
+</footer>
 
 {#if showRipple}
   <Ripple />

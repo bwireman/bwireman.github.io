@@ -18,9 +18,15 @@ $typescript: #2b7489;
 $javascript: #f1e05a;
 $dark: #363636;
 $orange: #ffae5f;
+$link: $dark;
 
 .hljs {
   font-family: "JetBrains Mono", monospace;
+}
+
+.link {
+  color: $link;
+  text-decoration: underline;
 }
 
 .hoverable {
@@ -55,8 +61,8 @@ $orange: #ffae5f;
     background: linear-gradient(to right, $golang, $gleam);
   }
 
-  &.genus {
-    background: linear-gradient(to right, $elixir, $typescript);
+  &.dreamy {
+    background: linear-gradient(to right, $dark, $elixir 25% 75%, $dark);
   }
 
   &.censys_ex {
