@@ -2,7 +2,7 @@
   import me from "./me.jpg"
   import svelte from "./svelte.png"
   import bulma from "./bulma.png"
-  import resume from "./ben_wireman_resume.pdf"
+  import ts from "./ts.png"
   import {onMount} from "svelte"
   import {getRepos, repos} from "./stores/hub"
 
@@ -250,12 +250,21 @@
   <div class="content">
     <h6>About:</h6>
     <ul>
-      <li><a target="_blank" class="link" href={resume}>Resumé</a></li>
+      <li>
+        <a
+          target="_blank"
+          class="link"
+          href="https://docs.google.com/presentation/d/1N2xrT2oJJWhOVBrwjDFTDvo2qAC_D4nKvfQhBIt_Oqo/edit#slide=id.p1"
+          >Resumé</a
+        >
+      </li>
       <li><a target="_blank" class="link" href="https://github.com/bwireman/bwireman.github.io">Repo</a></li>
       <li>
         This site is built using
         <span class="icon-text"><span class="icon"><img src={svelte} alt="svelte-logo" /></span> </span>
         <a target="_blank" class="link" href="https://svelte.dev/">Svelte</a>
+        , <span class="icon-text"><span class="icon"><img src={ts} alt="svelte-logo" /></span> </span>
+        <a target="_blank" class="link" href="https://www.typescriptlang.org/">TypeScript</a>
         & <span class="icon-text"><span class="icon"><img src={bulma} alt="bulma-logo" /></span> </span>
         <a target="_blank" class="link" href="https://bulma.io/">Bulma</a>
       </li>
