@@ -1,8 +1,13 @@
 <script lang="ts">
-  import me from "./me.jpg"
-  import svelte from "./svelte.png"
-  import bulma from "./bulma.png"
-  import ts from "./ts.png"
+  import me from "./images/me.jpg"
+  import svelte from "./images/svelte.png"
+  import bulma from "./images/bulma.png"
+  import ts from "./images/ts.png"
+  import apple_touch from "./images/apple-touch-icon.png"
+  import favicon32 from "./images/favicon-32x32.png"
+  import favicon16 from "./images/favicon-16x16.png"
+  import manifest from "./images/site.webmanifest"
+
   import {onMount} from "svelte"
   import {getRepos, repos} from "./stores/hub"
 
@@ -13,6 +18,7 @@
   import Skills from "./lib/Skills.svelte"
   import Experience from "./lib/Experience.svelte"
   import Ripple from "./lib/Ripple.svelte"
+  import Using from "./lib/using.svelte"
 
   let showRipple = false
 
@@ -26,6 +32,10 @@
 
 <svelte:head>
   {@html theme}
+  <link rel="apple-touch-icon" sizes="180x180" href={apple_touch} />
+  <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
+  <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
+  <link rel="manifest" href={manifest} />
 </svelte:head>
 
 <div class="columns enter is-centered">
@@ -260,13 +270,10 @@
       </li>
       <li><a target="_blank" class="link" href="https://github.com/bwireman/bwireman.github.io">Repo</a></li>
       <li>
-        This site is built using
-        <span class="icon-text"><span class="icon"><img src={svelte} alt="svelte-logo" /></span> </span>
-        <a target="_blank" class="link" href="https://svelte.dev/">Svelte</a>
-        , <span class="icon-text"><span class="icon"><img src={ts} alt="svelte-logo" /></span> </span>
-        <a target="_blank" class="link" href="https://www.typescriptlang.org/">TypeScript</a>
-        & <span class="icon-text"><span class="icon"><img src={bulma} alt="bulma-logo" /></span> </span>
-        <a target="_blank" class="link" href="https://bulma.io/">Bulma</a>
+        This site was built using
+        <Using name="Svelte" link="https://svelte.dev/" image={svelte} />,
+        <Using name="TypeScript" link="https://www.typescriptlang.org/" image={ts} /> &
+        <Using name="Bulma" link="https://bulma.io/" image={bulma} />
       </li>
     </ul>
   </div>

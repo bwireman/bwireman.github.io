@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('test snippet showing', async ({ page }) => {
+test('test resume', async ({ page }) => {
     await page.goto('http://localhost:4173/dev.html');
     await expect(page.locator('#self-intro')).toBeVisible();
 
