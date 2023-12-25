@@ -19,7 +19,8 @@
   import Experience from "./lib/Experience.svelte"
   import Ripple from "./lib/Ripple.svelte"
   import Using from "./lib/using.svelte"
-
+  import {UAParser} from "ua-parser-js"
+  import {general} from "./stores/general"
   let showRipple = false
 
   onMount(async () => repos.set(await getRepos("bwireman")))
@@ -28,6 +29,10 @@
       showRipple = true
       clearInterval(i)
     }, 500)
+
+    let parser = new UAParser(window.navigator.userAgent) // you need to pass the user-agent for nodejs
+    let parserResults = parser.getResult()
+    general.set({isMobile: parserResults.device.type === "mobile"})
   })
 </script>
 

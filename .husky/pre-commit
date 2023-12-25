@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+if [ ! -f ./index.html ]; then
+    echo "index.html not found!"
+    exit 1
+fi
+yarn build
+git add .

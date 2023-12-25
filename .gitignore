@@ -4,6 +4,7 @@ Gen-index.md
 node_modules/
 .vite
 dist
+yarn-error.log
 /test-results/
 /playwright-report/
 /playwright/.cache/
