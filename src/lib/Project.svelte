@@ -84,7 +84,13 @@
       </a>
     {/if}
     <!-- svelte-ignore a11y-missing-attribute -->
-    <a id={`${repo}-toggle-snippet`} on:keypress={expand} on:click={expand} class="card-footer-item">
+    <a
+      data-testid="snippet"
+      id={`${repo}-toggle-snippet`}
+      on:keypress={expand}
+      on:click={expand}
+      class="card-footer-item"
+    >
       <span class="icon is-size-5"><i class="fa-solid fa-code" /></span>
     </a>
   </footer>

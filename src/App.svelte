@@ -24,8 +24,9 @@
 
   onMount(async () => repos.set(await getRepos("bwireman")))
   onMount(() => {
-    setInterval(() => {
+    const i = setInterval(() => {
       showRipple = true
+      clearInterval(i)
     }, 500)
   })
 </script>
@@ -203,9 +204,9 @@
         packageUrl="https://hex.pm/packages/dreamy/"
         starCountFallback={0}
         language={elixir}
-        snippet="main/lib/dreamy.ex"
-        snippetStart={140}
-        snippetEnd={457}
+        snippet="main/lib/dreamy/monodic.ex"
+        snippetStart={238}
+        snippetEnd={1178}
       />
 
       <br />
