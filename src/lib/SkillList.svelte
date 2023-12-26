@@ -1,8 +1,5 @@
 <script lang="ts">
-  interface Skill {
-    name: string
-    icon?: string
-  }
+  import type {Skill} from "../types"
 
   export let skills: Skill[] = []
 </script>

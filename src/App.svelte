@@ -169,7 +169,8 @@
           {name: "GO"},
           {name: "Java"},
           {name: "Scala"},
-          {name: "C/C++"}
+          {name: "C"},
+          {name: "C++"}
         ]}
       />
 
