@@ -48,7 +48,7 @@
 
     animation-name: bounce;
     animation-iteration-count: infinite;
-    animation-fill-mode: backwards;
+    animation-fill-mode: both;
     animation-timing-function: cubic-bezier(0.5, 0.07, 0.64, 1);
   }
 
@@ -59,7 +59,7 @@
     }
     100% {
       background-color: whitesmoke;
-      transform: scale(0) translateY(-10rem);
+      transform: scale(0) translateY(-6rem);
       opacity: 0;
     }
   }

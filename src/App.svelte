@@ -187,13 +187,20 @@
           {icon: "fa-solid fa-cloud", name: "Kubernetes"},
           {icon: "fa-solid fa-cloud", name: "AWS"},
           {icon: "fa-solid fa-cloud", name: "Google Cloud Platform"},
+          {icon: "fa-solid fa-cloud", name: "GCP Pub Sub"},
           {icon: "fa-solid fa-cloud", name: "Terraform"},
           {icon: "fa-solid fa-server", name: "ElasticSearch"},
           {icon: "fa-solid fa-angles-right", name: "Apache Beam"},
           {icon: "fa-solid fa-angles-right", name: "Apache Airflow"},
           {icon: "fa-solid fa-terminal", name: "Docker"},
           {icon: "fa-solid fa-terminal", name: "Linux"},
-          {icon: "fa-solid fa-terminal", name: "Bash"}
+          {icon: "fa-solid fa-terminal", name: "Bash"},
+          {icon: "fa-solid fa-vector-square", name: "Protobuf"},
+          {icon: "fa-solid fa-vector-square", name: "Avro"},
+          {icon: "fa-solid fa-vector-square", name: "GRPC"},
+          {icon: "fa-solid fa-database", name: "Postgres"},
+          {icon: "fa-solid fa-database", name: "Big Query"},
+          {icon: "fa-solid fa-database", name: "Redis"}
         ]}
       />
       <h1 class="title">
