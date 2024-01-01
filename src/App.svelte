@@ -218,8 +218,8 @@
         starCountFallback={0}
         language={elixir}
         snippet="main/lib/dreamy/monodic.ex"
-        snippetStart={238}
-        snippetEnd={1178}
+        snippetStart={1042}
+        snippetEnd={1666}
       />
 
       <br />
