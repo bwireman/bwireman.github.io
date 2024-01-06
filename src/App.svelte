@@ -72,6 +72,13 @@
         <a target="_blank" href="https://github.com/bwireman" class="card-footer-item">
           <span class="icon is-size-2 has-text-dark"><i class="fab fa-github" /></span>
         </a>
+        <a
+          target="_blank"
+          class="card-footer-item"
+          href="https://docs.google.com/presentation/d/1N2xrT2oJJWhOVBrwjDFTDvo2qAC_D4nKvfQhBIt_Oqo/edit#slide=id.p1"
+        >
+          <span class="icon is-size-2 has-text-dark"><i class="fa-solid fa-file-export" /></span>
+        </a>
       </footer>
     </div>
   </div>
