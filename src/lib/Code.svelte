@@ -9,7 +9,7 @@
 
   let code = ""
   let i = 0
-  let writer
+  let writer: number
   onMount(() => {
     writer = setInterval(() => {
       code = source.substring(0, i)

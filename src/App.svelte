@@ -23,16 +23,13 @@
   import {general} from "./stores/general"
   let showRipple = false
 
-  onMount(async () => repos.set(await getRepos("bwireman")))
-  onMount(() => {
-    const i = setInterval(() => {
-      showRipple = true
-      clearInterval(i)
-    }, 500)
-
-    let parser = new UAParser(window.navigator.userAgent) // you need to pass the user-agent for nodejs
-    let parserResults = parser.getResult()
+  onMount(async () => {
+    const parserResults = new UAParser(window.navigator.userAgent).getResult()
     general.set({isMobile: parserResults.device.type === "mobile"})
+    setTimeout(() => (showRipple = true), 500)
+    const reposPromise = getRepos("bwireman")
+
+    repos.set(await reposPromise)
   })
 </script>
 
@@ -173,7 +170,7 @@
           {name: "Python"},
           {name: "Elixir"},
           {name: "Javascript"},
-          {name: "GO"},
+          {name: "Go"},
           {name: "Java"},
           {name: "Scala"},
           {name: "C"},
