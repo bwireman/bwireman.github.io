@@ -81,7 +81,7 @@
   </div>
 </div>
 
-<div class="columns enter-b is-centered">
+<div class="columns enter-body is-centered">
   <div class="column is-two-fifths">
     <section class="section">
       <h1 class="title">
@@ -324,8 +324,8 @@
 
     @keyframes enter {
       0% {
-        transform: translateY(70%);
         opacity: 30%;
+        transform: translateY(70%);
       }
 
       100% {
@@ -334,21 +334,8 @@
     }
   }
 
-  .enter-b {
-    overflow: hidden;
-    position: relative;
-
-    animation: enter-b 1.2s ease;
-
-    @keyframes enter-b {
-      0% {
-        opacity: 30%;
-        transform: translateY(50%);
-      }
-
-      100% {
-        transform: translateY(0%);
-      }
-    }
+  .enter-body {
+    @extend .enter;
+    animation-duration: 1350ms;
   }
 </style>
