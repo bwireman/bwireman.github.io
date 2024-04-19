@@ -107,7 +107,7 @@
         roles={[
           {
             title: "Senior Software Engineer",
-            span: "April 2022 - Now"
+            span: "April 2022 - April 2024"
           },
           {
             title: "Software Engineer II",
