@@ -90,6 +90,19 @@
       </h1>
 
       <Experience
+        company="Splunk"
+        roles={[
+          {
+            title: "Senior Software Engineer",
+            span: "April 2024 - Now"
+          }
+        ]}
+        description="Working to improve Splunk Cloud"
+      />
+
+      <br />
+
+      <Experience
         company="Alertmedia"
         roles={[
           {
