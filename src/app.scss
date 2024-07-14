@@ -16,7 +16,7 @@ $elixir: #6e4a7e;
 $gleam: #ffaff3;
 $typescript: #2b7489;
 $javascript: #f1e05a;
-$dark: #363636;
+$dark: #2e333d;
 $orange: #ffae5f;
 $link: $dark;
 
@@ -65,15 +65,11 @@ $link: $dark;
   }
 
   &.dreamy {
-    background: linear-gradient(to right, $dark, $elixir 25% 75%, $dark);
-  }
-
-  &.censys_ex {
-    background: linear-gradient(to right, $dark, $elixir 25% 75%, $orange);
+    background: $elixir;
   }
 
   &.gleam {
-    background: linear-gradient(to right, $typescript, $gleam, $javascript);
+    background: $gleam;
   }
 
   &.dark {

@@ -12,7 +12,8 @@
   import {getRepos, repos} from "./stores/hub"
 
   import theme from "svelte-highlight/styles/stackoverflow-dark"
-  import {go, typescript, elixir} from "svelte-highlight/languages"
+  import {go, elixir} from "svelte-highlight/languages"
+  import gleam from "@gleam-lang/highlight.js-gleam"
 
   import Project from "./lib/Project.svelte"
   import Skills from "./lib/Skills.svelte"
@@ -97,7 +98,7 @@
             span: "April 2024 - Now"
           }
         ]}
-        description="Working to improve Splunk Cloud"
+        description="Working to improve Splunk Cloud infrastructure & reliability."
       />
 
       <br />
@@ -256,33 +257,33 @@
       <br />
 
       <Project
-        title="censys_ex"
-        description="Elixir ⚗️ wrapper for Censys Search V2 API"
-        lang="censys_ex"
-        repo="censys_ex"
+        title="🕵️‍♂️ go-over"
+        description="A tool to audit Erlang & Elixir dependencies, to make sure your ✨ gleam projects really sparkle!"
+        lang="gleam"
+        repo="go-over"
+        packageName="go_over"
         hex={true}
-        packageUrl="https://hex.pm/packages/censys_ex/"
-        starCountFallback={4}
-        language={elixir}
-        snippet="main/lib/api/paginate.ex"
-        snippetStart={900}
-        snippetEnd={1452}
+        packageUrl="https://hex.pm/packages/go_over/"
+        starCountFallback={1}
+        language={{name: "gleam", register: gleam}}
+        snippet="main/src/go_over/util/cache.gleam"
+        snippetEnd={1500}
       />
 
       <br />
 
       <Project
-        title="esgleam"
-        description="esbuild plugin for gleam 🌸"
+        title="🌵 cactus"
+        description="A tool for managing git lifecycle hooks with ✨ gleam! Pre commit, Pre push and more!"
         lang="gleam"
-        repo="esgleam"
-        npm={true}
-        packageUrl="https://www.npmjs.com/package/esgleam"
-        starCountFallback={8}
-        language={typescript}
-        snippet="main/index.ts"
-        snippetStart={1050}
-        snippetEnd={1495}
+        repo="cactus"
+        hex={true}
+        packageUrl="https://hex.pm/packages/cactus/"
+        starCountFallback={5}
+        language={{name: "gleam", register: gleam}}
+        snippet="main/src/cactus/write.gleam"
+        snippetStart={550}
+        snippetEnd={2000}
       />
     </section>
   </div>

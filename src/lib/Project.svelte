@@ -12,6 +12,7 @@
   export let lang: string
   export let repo: string
   export let packageUrl = ""
+  export let packageName = ""
   export let starCountFallback: number | null
   export let language: LanguageType<string>
   export let snippet: string
@@ -42,7 +43,7 @@
       {/if}
 
       {#if hex}
-        {#await getHex(repo)}
+        {#await getHex(packageName || repo)}
           <div class="loader" />
         {:then pm}
           {#if pm}
@@ -52,7 +53,7 @@
       {/if}
 
       {#if npm}
-        {#await getNpm(repo)}
+        {#await getNpm(packageName || repo)}
           <div class="loader" />
         {:then pm}
           {#if pm}

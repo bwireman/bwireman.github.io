@@ -7,8 +7,8 @@ test('test snippet showing', async ({ page }) => {
   await page.locator('#dreamy-toggle-snippet').click();
   await expect(page.locator('#dreamy-snippet')).toBeVisible();
 
-  await page.locator('#censys_ex-toggle-snippet').click();
-  await expect(page.locator('#censys_ex-snippet')).toBeVisible();
+  await page.locator('#cactus-toggle-snippet').click();
+  await expect(page.locator('#cactus-snippet')).toBeVisible();
   await expect(page.locator('#dreamy-snippet')).toBeVisible({visible: false});
 
   await page.locator('#dreamy-toggle-snippet').click();
