@@ -31,10 +31,12 @@
   {/each}
 </div>
 
-<style style="scss">
+<style lang="scss">
+  $dark: #2e333d;
+
   .floor {
     bottom: 0;
-    background-color: #112212;
+    background-color: $dark;
     place-self: end center;
     position: fixed;
     max-height: 1rem;
@@ -54,7 +56,7 @@
 
   @keyframes bounce {
     0% {
-      background-color: #112212;
+      background-color: $dark;
       transform: scale(1) translateY(0rem);
     }
     100% {

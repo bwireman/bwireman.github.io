@@ -12,7 +12,7 @@
 </div>
 
 <style lang="scss">
-  $dark: #363636;
+  $dark: #2e333d;
 
   .tooltip {
     position: relative;
