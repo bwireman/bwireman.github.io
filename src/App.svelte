@@ -289,24 +289,10 @@
 </div>
 <footer class="footer">
   <div class="content">
-    <h6>About:</h6>
-    <ul>
-      <li>
-        <a
-          target="_blank"
-          class="link"
-          href="https://docs.google.com/presentation/d/1N2xrT2oJJWhOVBrwjDFTDvo2qAC_D4nKvfQhBIt_Oqo/edit#slide=id.p1"
-          >Resumé</a
-        >
-      </li>
-      <li><a target="_blank" class="link" href="https://github.com/bwireman/bwireman.github.io">Repo</a></li>
-      <li>
-        This site was built using
-        <Using name="Svelte" link="https://svelte.dev/" image={svelte} />,
-        <Using name="TypeScript" link="https://www.typescriptlang.org/" image={ts} /> &
-        <Using name="Bulma" link="https://bulma.io/" image={bulma} />
-      </li>
-    </ul>
+    This site was built using
+    <Using name="Svelte" link="https://svelte.dev/" image={svelte} />,
+    <Using name="TypeScript" link="https://www.typescriptlang.org/" image={ts} /> &
+    <Using name="Bulma" link="https://bulma.io/" image={bulma} />
   </div>
 </footer>
 
