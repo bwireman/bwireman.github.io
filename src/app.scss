@@ -61,7 +61,7 @@ $link: $dark;
   animation: wipe 3s ease alternate infinite;
 
   &.golang {
-    background: linear-gradient(to right, $golang, $gleam);
+    background: $golang;
   }
 
   &.dreamy {

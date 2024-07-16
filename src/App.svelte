@@ -225,6 +225,23 @@
         <span class="icon is-large has-text-dark"><i class="fas fa-code-branch" /></span>
         Personal Projects
       </h1>
+      <Project
+        title="🕵️‍♂️ go-over"
+        description="A tool to audit Erlang & Elixir dependencies, to make sure your ✨ gleam projects really sparkle!"
+        lang="gleam"
+        repo="go-over"
+        packageName="go_over"
+        hex={true}
+        packageUrl="https://hex.pm/packages/go_over/"
+        starCountFallback={1}
+        header={false}
+        language={{name: "gleam", register: gleam}}
+        snippet="main/src/go_over/util/cache.gleam"
+        snippetStart={625}
+        snippetEnd={1500}
+      />
+
+      <br />
 
       <Project
         title="dreamy 😴"
@@ -257,22 +274,6 @@
       <br />
 
       <Project
-        title="🕵️‍♂️ go-over"
-        description="A tool to audit Erlang & Elixir dependencies, to make sure your ✨ gleam projects really sparkle!"
-        lang="gleam"
-        repo="go-over"
-        packageName="go_over"
-        hex={true}
-        packageUrl="https://hex.pm/packages/go_over/"
-        starCountFallback={1}
-        language={{name: "gleam", register: gleam}}
-        snippet="main/src/go_over/util/cache.gleam"
-        snippetEnd={1500}
-      />
-
-      <br />
-
-      <Project
         title="🌵 cactus"
         description="A tool for managing git lifecycle hooks with ✨ gleam! Pre commit, Pre push and more!"
         lang="gleam"
@@ -282,7 +283,8 @@
         starCountFallback={5}
         language={{name: "gleam", register: gleam}}
         snippet="main/src/cactus/write.gleam"
-        snippetStart={550}
+        header={false}
+        snippetStart={635}
         snippetEnd={2000}
       />
     </section>

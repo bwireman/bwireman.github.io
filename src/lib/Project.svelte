@@ -20,6 +20,7 @@
   export let snippetEnd = 500
   export let hex = false
   export let npm = false
+  export let header = true
 
   let hide = true
   $: showSnippet = $snippetShowing == repo && !hide
@@ -29,7 +30,7 @@
   }
 </script>
 
-<div class="card dark-card">
+<div class="hoverable card dark-card">
   <div class="card-content">
     <p class="title">{title}</p>
     <p class="subtitle">{description}</p>
@@ -63,7 +64,7 @@
       {/if}
     </span>
 
-    {#await getSnippet(repo, snippet, snippetStart, snippetEnd)}
+    {#await getSnippet(repo, snippet, snippetStart, snippetEnd, header)}
       {#if showSnippet}
         <div class="loader" />
       {/if}
