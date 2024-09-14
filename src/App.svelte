@@ -250,25 +250,11 @@
         repo="dreamy"
         hex={true}
         packageUrl="https://hex.pm/packages/dreamy/"
-        starCountFallback={0}
+        starCountFallback={3}
         language={elixir}
         snippet="main/lib/dreamy/monodic.ex"
         snippetStart={1355}
         snippetEnd={1721}
-      />
-
-      <br />
-
-      <Project
-        title="gleam_pb"
-        description="Protobuf support for Gleam ✨, written in GO"
-        lang="golang"
-        repo="gleam_pb"
-        starCountFallback={14}
-        language={go}
-        snippetStart={92}
-        snippetEnd={465}
-        snippet="main/pkg/gleam/gpb.go"
       />
 
       <br />
@@ -286,6 +272,20 @@
         header={false}
         snippetStart={635}
         snippetEnd={2000}
+      />
+
+      <br />
+
+      <Project
+        title="gleam_pb"
+        description="Protobuf support for Gleam ✨, written in GO"
+        lang="golang"
+        repo="gleam_pb"
+        starCountFallback={14}
+        language={go}
+        snippetStart={92}
+        snippetEnd={465}
+        snippet="main/pkg/gleam/gpb.go"
       />
     </section>
   </div>
