@@ -11,7 +11,8 @@
     "lint": "eslint --fix --quiet src --ext .ts,.js,.svelte",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "test": "playwright test",
-    "prepare": "husky"
+    "prepare": "husky",
+    "dl-resume": "./scripts/dl-resume.sh"
   },
   "prettier": {
     "arrowParens": "avoid",
