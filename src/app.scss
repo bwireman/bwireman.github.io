@@ -98,3 +98,32 @@ pre {
   background-color: $dark;
   margin: 0rem -1rem -1rem -1rem;
 }
+
+.enter {
+  overflow: hidden;
+  position: relative;
+
+  animation: enter 1.2s ease;
+
+  @keyframes enter {
+    0% {
+      opacity: 30%;
+      transform: translateY(70%);
+    }
+
+    100% {
+      transform: translateY(0%);
+    }
+  }
+}
+
+.enter-body {
+  @extend .enter;
+  animation-duration: 1350ms;
+}
+
+.snark {
+  @extend .enter;
+  animation-duration: 800ms;
+  padding-bottom: .1rem;
+}

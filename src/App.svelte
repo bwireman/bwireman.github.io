@@ -20,26 +20,9 @@
   import Using from "./lib/using.svelte"
   import {UAParser} from "ua-parser-js"
   import {general} from "./stores/general"
-  import {Viewable} from "@svelte-plugins/viewable"
+  import Snark from "./lib/Snark.svelte"
 
   let showRipple = false
-  let snarkLevel = 0
-  let octopus: Element | undefined
-  let octopusEnd: Element | undefined
-
-  const onViewOctopus = () => {
-    if (snarkLevel >= 5) return
-    if (!octopusEnd) return
-    snarkLevel += 1
-    octopusEnd.scrollIntoView({
-      inline: "end",
-      behavior: "smooth"
-    })
-  }
-
-  const rules = {
-    dwell: {duration: 0.75, percentage: 50, fn: onViewOctopus, repeat: true}
-  }
 
   onMount(async () => {
     // force scroll to top on reload
@@ -308,28 +291,11 @@
   </div>
 </div>
 <footer class="footer" style="margin: 0.1rem; padding: 0.1rem;">
-  <Viewable {rules} element={octopus}>
-    <div bind:this={octopus} style="text-align: center; padding: 1rem">
-      {#if snarkLevel > 0}
-        <p style="font-size: 3.5rem" class="snark">🐙</p>
-      {/if}
-      {#if snarkLevel > 1}
-        <p class="snark">Hey!</p>
-      {/if}
-      {#if snarkLevel > 2}
-        <p class="snark">What are you doing here!?</p>
-      {/if}
-      {#if snarkLevel > 3}
-        <p class="snark">Go Away!</p>
-      {/if}
-    </div>
-    <div class="snark" bind:this={octopusEnd}></div>
-  </Viewable>
-
-  <div style="padding-left: 1rem;" class="content">
+  <Snark />
+  <div class="built content">
     Built using
     <Using name="Svelte" link="https://svelte.dev/" image={svelte} />,
-    <Using name="TypeScript" link="https://www.typescriptlang.org/" image={ts} /> &
+    <Using name="TypeScript" link="https://www.typescriptlang.org/" image={ts} />, &
     <Using name="Bulma" link="https://bulma.io/" image={bulma} />
   </div>
 </footer>
@@ -339,6 +305,11 @@
 {/if}
 
 <style lang="scss">
+  .built {
+    padding-left: 1rem;
+    padding-bottom: 0.25rem;
+  }
+
   @media screen and (min-width: 769px) {
     .mobile-image {
       display: none;
@@ -351,34 +322,5 @@
       display: none;
       visibility: hidden;
     }
-  }
-
-  .enter {
-    overflow: hidden;
-    position: relative;
-
-    animation: enter 1.2s ease;
-
-    @keyframes enter {
-      0% {
-        opacity: 30%;
-        transform: translateY(70%);
-      }
-
-      100% {
-        transform: translateY(0%);
-      }
-    }
-  }
-
-  .enter-body {
-    @extend .enter;
-    animation-duration: 1350ms;
-  }
-
-  .snark {
-    @extend .enter;
-    animation-duration: 750ms;
-    padding-bottom: 1rem;
   }
 </style>
