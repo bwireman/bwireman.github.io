@@ -7,14 +7,11 @@
   import favicon32 from "./images/favicon-32x32.png"
   import favicon16 from "./images/favicon-16x16.png"
   import manifest from "./images/site.webmanifest"
-
   import {onMount} from "svelte"
   import {getRepos, repos} from "./stores/hub"
-
   import theme from "svelte-highlight/styles/stackoverflow-dark"
   import {go, elixir} from "svelte-highlight/languages"
   import gleam from "@gleam-lang/highlight.js-gleam"
-
   import Project from "./lib/Project.svelte"
   import Skills from "./lib/Skills.svelte"
   import Experience from "./lib/Experience.svelte"
@@ -23,12 +20,13 @@
   import {UAParser} from "ua-parser-js"
   import {general} from "./stores/general"
   import {Viewable} from "@svelte-plugins/viewable"
+
   let showRipple = false
   let snarkLevel = 0
   let octopus: Element | undefined
   let octopusEnd: Element | undefined
 
-  const dwell = () => {
+  const onViewOctopus = () => {
     if (snarkLevel >= 5) return
     if (!octopusEnd) return
     snarkLevel += 1
@@ -39,10 +37,15 @@
   }
 
   const rules = {
-    dwell: {duration: 0.75, percentage: 50, fn: dwell, repeat: true}
+    dwell: {duration: 0.75, percentage: 50, fn: onViewOctopus, repeat: true}
   }
 
   onMount(async () => {
+    // force scroll to top on reload
+    window.onbeforeunload = () => {
+      window.scrollTo(0, 0)
+    }
+
     const parserResults = new UAParser(window.navigator.userAgent).getResult()
     general.set({isMobile: parserResults.device.type === "mobile"})
     setTimeout(() => (showRipple = true), 500)
@@ -287,8 +290,8 @@
         language={{name: "gleam", register: gleam}}
         snippet="main/src/cactus/write.gleam"
         header={false}
-        snippetStart={635}
-        snippetEnd={2000}
+        snippetStart={1069}
+        snippetEnd={1742}
       />
 
       <br />
@@ -317,7 +320,7 @@
         <p class="snark">Hey!</p>
       {/if}
       {#if snarkLevel > 2}
-        <p class="snark">What are you doing here!</p>
+        <p class="snark">What are you doing here!?</p>
       {/if}
       {#if snarkLevel > 3}
         <p class="snark">Go Away!</p>
@@ -334,7 +337,7 @@
   </div>
 </footer>
 
-{#if showRipple && snarkLevel < 1}
+{#if showRipple}
   <Ripple />
 {/if}
 
