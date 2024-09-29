@@ -1,5 +1,14 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/usr/bin/bash
+set -ex
+
+gdown 1N2xrT2oJJWhOVBrwjDFTDvo2qAC_D4nKvfQhBIt_Oqo --format pdf
+mv Resume.pdf ./src/images/ben_wireman_resume.pdf
+sha256sum ./src/images/ben_wireman_resume.pdf > ben_wireman_resume.pdf.sha256
+
+if [ ! -f ./src/images/ben_wireman_resume.pdf ]; then
+    echo "ben_wireman_resume.pdf not found!"
+    exit 1
+fi
 
 yarn build
 git add .

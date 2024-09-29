@@ -7,6 +7,7 @@
   import favicon32 from "./images/favicon-32x32.png"
   import favicon16 from "./images/favicon-16x16.png"
   import manifest from "./images/site.webmanifest"
+  import resume from "./images/ben_wireman_resume.pdf"
   import {onMount} from "svelte"
   import {getRepos, repos} from "./stores/hub"
   import theme from "svelte-highlight/styles/stackoverflow-dark"
@@ -90,11 +91,7 @@
         <a target="_blank" href="https://github.com/bwireman" class="card-footer-item">
           <span class="icon is-size-2 has-text-dark"><i class="fab fa-github" /></span>
         </a>
-        <a
-          target="_blank"
-          class="card-footer-item"
-          href="https://docs.google.com/presentation/d/1N2xrT2oJJWhOVBrwjDFTDvo2qAC_D4nKvfQhBIt_Oqo/edit#slide=id.p1"
-        >
+        <a target="_blank" class="card-footer-item" href={resume} download="ben_wireman_resume.pdf">
           <span class="icon is-size-2 has-text-dark"><i class="fa-solid fa-file-export" /></span>
         </a>
       </footer>
