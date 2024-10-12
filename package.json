@@ -12,7 +12,8 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "test": "playwright test",
     "prepare": "husky",
-    "dl-resume": "./scripts/dl-resume.sh"
+    "dl-resume": "./scripts/dl-resume.sh",
+    "update": "yarn upgrade"
   },
   "prettier": {
     "arrowParens": "avoid",

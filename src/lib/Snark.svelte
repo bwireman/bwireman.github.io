@@ -19,9 +19,9 @@
   let endElement: Element | undefined
 
   const onViewEmoji = () => {
-    if (lvl >= 5) return
+    if (lvl > 4) return
     if (!endElement) return
-    lvl += 1
+    lvl++
     endElement.scrollIntoView({
       inline: "end",
       behavior: "smooth"
@@ -53,7 +53,7 @@
       {/if}
     </div>
   </div>
-  <div class="snark" bind:this={endElement}></div>
+  <div bind:this={endElement}></div>
 </Viewable>
 
 <style lang="scss">
