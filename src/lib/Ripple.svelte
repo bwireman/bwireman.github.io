@@ -11,7 +11,7 @@
     duration: number
   }
 
-  let bubbles: Bubble[] = []
+  let bubbles: Bubble[] = $state([])
   const gen_style = (idx: number, {size, delay, duration}: Bubble) => {
     return `margin-left: ${
       idx % 100
@@ -27,7 +27,7 @@
 
 <div class="floor">
   {#each bubbles as bubble, i}
-    <div class="bo bounce" style={gen_style(i, bubble)} />
+    <div class="bo bounce" style={gen_style(i, bubble)}></div>
   {/each}
 </div>
 

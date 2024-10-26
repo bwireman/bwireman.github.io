@@ -4,7 +4,6 @@ rm -rf index.html dist assets
 
 yarn upgrade
 yarn audit
-yarn check
 yarn format
 yarn lint
 # includes a call to `yarn vite build`

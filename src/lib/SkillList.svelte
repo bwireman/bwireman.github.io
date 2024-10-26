@@ -1,14 +1,18 @@
 <script lang="ts">
   import type {Skill} from "../types"
 
-  export let skills: Skill[] = []
+  interface Props {
+    skills?: Skill[]
+  }
+
+  let {skills = []}: Props = $props()
 </script>
 
 <ul>
   {#each skills as skill}
     {#if skill.icon}
       <li>
-        <i class={`${skill.icon}`} />
+        <i class={`${skill.icon}`}></i>
         {skill.name}
       </li>
     {:else}

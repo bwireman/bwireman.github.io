@@ -4,9 +4,13 @@
     span: string
   }
 
-  export let company: string
-  export let roles: Role[]
-  export let description: string
+  interface Props {
+    company: string
+    roles: Role[]
+    description: string
+  }
+
+  let {company, roles, description}: Props = $props()
 </script>
 
 <div class="card hoverable">

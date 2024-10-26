@@ -1,7 +1,11 @@
 <script lang="ts">
-  export let image: string
-  export let name: string
-  export let link: string
+  interface Props {
+    image: string
+    name: string
+    link: string
+  }
+
+  let {image, name, link}: Props = $props()
 </script>
 
 <div class="tooltip">

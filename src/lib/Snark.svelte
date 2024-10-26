@@ -14,9 +14,9 @@
   const midMessage = randAssign(["What are you doing here!?", "Why are you here?"])
   const endMessage = randAssign(["Go away!", "The stuffs up there!", "Leave!"])
 
-  let lvl = 0
-  let emojiElement: Element | undefined
-  let endElement: Element | undefined
+  let lvl = $state(0)
+  let emojiElement: Element | undefined = $state()
+  let endElement: Element | undefined = $state()
 
   const onViewEmoji = () => {
     if (lvl > 4) return

@@ -3,11 +3,15 @@
   import Highlight from "svelte-highlight"
   import type {LanguageType} from "svelte-highlight/languages"
 
-  export let name: string
-  export let language: LanguageType<string>
-  export let source: string
+  interface Props {
+    name: string
+    language: LanguageType<string>
+    source: string
+  }
 
-  let code = ""
+  let {name, language, source}: Props = $props()
+
+  let code = $state("")
   let i = 0
   let writer: number
   onMount(() => {

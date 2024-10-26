@@ -7,23 +7,42 @@
   import {getPackage as getHex} from "../hex"
   import {getPackage as getNpm} from "../npm"
 
-  export let title: string
-  export let description: string
-  export let lang: string
-  export let repo: string
-  export let packageUrl = ""
-  export let packageName = ""
-  export let starCountFallback: number | null
-  export let language: LanguageType<string>
-  export let snippet: string
-  export let snippetStart = 0
-  export let snippetEnd = 500
-  export let hex = false
-  export let npm = false
-  export let header = true
+  interface Props {
+    title: string
+    description: string
+    lang: string
+    repo: string
+    packageUrl?: string
+    packageName?: string
+    starCountFallback: number | null
+    language: LanguageType<string>
+    snippet: string
+    snippetStart?: number
+    snippetEnd?: number
+    hex?: boolean
+    npm?: boolean
+    header?: boolean
+  }
 
-  let hide = true
-  $: showSnippet = $snippetShowing == repo && !hide
+  let {
+    title,
+    description,
+    lang,
+    repo,
+    packageUrl = "",
+    packageName = "",
+    starCountFallback,
+    language,
+    snippet,
+    snippetStart = 0,
+    snippetEnd = 500,
+    hex = false,
+    npm = false,
+    header = true
+  }: Props = $props()
+
+  let hide = $state(true)
+  let showSnippet = $derived($snippetShowing == repo && !hide)
   const expand = () => {
     hide = showSnippet
     snippetShowing.set(repo)
@@ -37,7 +56,7 @@
     <span>
       {#if starCountFallback}
         {#await getStars($repos, repo, starCountFallback)}
-          <div class="loader" />
+          <div class="loader"></div>
         {:then star_count}
           <i class="far fa-star">{star_count}</i>
         {/await}
@@ -45,7 +64,7 @@
 
       {#if hex}
         {#await getHex(packageName || repo)}
-          <div class="loader" />
+          <div class="loader"></div>
         {:then pm}
           {#if pm}
             <i class="fa-solid fa-download">&ThinSpace;{pm.downloads_all}</i>
@@ -55,7 +74,7 @@
 
       {#if npm}
         {#await getNpm(packageName || repo)}
-          <div class="loader" />
+          <div class="loader"></div>
         {:then pm}
           {#if pm}
             <i class="fa-solid fa-download">&ThinSpace;{pm.downloads_all}</i>
@@ -66,7 +85,7 @@
 
     {#await getSnippet(repo, snippet, snippetStart, snippetEnd, header)}
       {#if showSnippet}
-        <div class="loader" />
+        <div class="loader"></div>
       {/if}
     {:then source}
       {#if showSnippet}
@@ -78,22 +97,22 @@
   </div>
   <footer class={`card-footer lang-footer ${lang}`}>
     <a target="_blank" href={`https://github.com/bwireman/${repo}`} class="card-footer-item">
-      <span class="icon is-size-3"><i class="fab fa-github" /></span>
+      <span class="icon is-size-3"><i class="fab fa-github"></i></span>
     </a>
     {#if packageUrl}
       <a target="_blank" href={packageUrl} class="card-footer-item">
         <span class="icon is-size-3">📦</span>
       </a>
     {/if}
-    <!-- svelte-ignore a11y-missing-attribute -->
+    <!-- svelte-ignore a11y_missing_attribute -->
     <a
       data-testid="snippet"
       id={`${repo}-toggle-snippet`}
-      on:keypress={expand}
-      on:click={expand}
+      onkeypress={expand}
+      onclick={expand}
       class="card-footer-item"
     >
-      <span class="icon is-size-5"><i class="fa-solid fa-code" /></span>
+      <span class="icon is-size-5"><i class="fa-solid fa-code"></i></span>
     </a>
   </footer>
 </div>

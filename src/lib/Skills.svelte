@@ -1,20 +1,28 @@
 <script lang="ts">
+  import {run} from "svelte/legacy"
+
   import {general} from "../stores/general"
   import type {Skill} from "../types"
   import SkillList from "./SkillList.svelte"
 
-  export let skills: Skill[] = []
+  interface Props {
+    skills?: Skill[]
+  }
+
+  let {skills = []}: Props = $props()
   const left: Skill[] = []
   const right: Skill[] = []
-  $: if (!$general.isMobile) {
-    for (let i = 0; i < skills.length; i++) {
-      if (i < skills.length / 2) {
-        left.push(skills[i])
-      } else {
-        right.push(skills[i])
+  run(() => {
+    if (!$general.isMobile) {
+      for (let i = 0; i < skills.length; i++) {
+        if (i < skills.length / 2) {
+          left.push(skills[i])
+        } else {
+          right.push(skills[i])
+        }
       }
     }
-  }
+  })
 </script>
 
 {#if $general.isMobile}

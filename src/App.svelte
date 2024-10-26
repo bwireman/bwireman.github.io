@@ -22,7 +22,7 @@
   import {general} from "./stores/general"
   import Snark from "./lib/Snark.svelte"
 
-  let showRipple = false
+  let showRipple = $state(false)
 
   onMount(async () => {
     // force scroll to top on reload
@@ -69,13 +69,13 @@
       </div>
       <footer class="card-footer lang-footer dark">
         <a target="_blank" href="https://www.linkedin.com/in/benjamin-wireman-1342bb127/" class="card-footer-item">
-          <span class="icon is-size-2 has-text-dark"><i class="fab fa-linkedin" /></span>
+          <span class="icon is-size-2 has-text-dark"><i class="fab fa-linkedin"></i></span>
         </a>
         <a target="_blank" href="https://github.com/bwireman" class="card-footer-item">
-          <span class="icon is-size-2 has-text-dark"><i class="fab fa-github" /></span>
+          <span class="icon is-size-2 has-text-dark"><i class="fab fa-github"></i></span>
         </a>
         <a target="_blank" class="card-footer-item" href={resume} download="ben_wireman_resume.pdf">
-          <span class="icon is-size-2 has-text-dark"><i class="fa-solid fa-file-export" /></span>
+          <span class="icon is-size-2 has-text-dark"><i class="fa-solid fa-file-export"></i></span>
         </a>
       </footer>
     </div>
@@ -86,7 +86,7 @@
   <div class="column is-two-fifths">
     <section class="section">
       <h1 class="title">
-        <span class="icon is-large has-text-dark"><i class="fas fa-briefcase" /></span>
+        <span class="icon is-large has-text-dark"><i class="fas fa-briefcase"></i></span>
         Work Experience
       </h1>
 
@@ -193,7 +193,7 @@
       />
 
       <h1 class="title">
-        <span class="icon is-large has-text-dark"><i class="fas fa-server" /></span>
+        <span class="icon is-large has-text-dark"><i class="fas fa-server"></i></span>
         Technologies
       </h1>
       <Skills
@@ -222,7 +222,7 @@
         ]}
       />
       <h1 class="title">
-        <span class="icon is-large has-text-dark"><i class="fas fa-code-branch" /></span>
+        <span class="icon is-large has-text-dark"><i class="fas fa-code-branch"></i></span>
         Personal Projects
       </h1>
       <Project
