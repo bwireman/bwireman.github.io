@@ -21,7 +21,6 @@ export default [{
     plugins: {
         "@typescript-eslint": typescriptEslint,
     },
-
     languageOptions: {
         globals: {
             ...globals.browser,
