@@ -1,7 +1,7 @@
 #!/usrbin/env bash
 set -ex
 
-yarn dl-resume
+npm run dl-resume
 sha256sum ./src/images/ben_wireman_resume.pdf > ben_wireman_resume.pdf.sha256
 
 if [ ! -f ./src/images/ben_wireman_resume.pdf ]; then
@@ -9,7 +9,7 @@ if [ ! -f ./src/images/ben_wireman_resume.pdf ]; then
     exit 1
 fi
 
-yarn build
+npm run build
 git add .
 if [ ! -f ./index.html ]; then
     echo "index.html not found!"

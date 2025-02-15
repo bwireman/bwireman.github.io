@@ -1,13 +1,14 @@
+#!/usr/bin/bash
 set -ex
 
 rm -rf index.html dist assets
 
-yarn upgrade
-yarn audit
-yarn format
-yarn lint
+npm upgrade
+npm audit
+npm run format
+npm run lint
 # includes a call to `yarn vite build`
-yarn test
+npm run test
 
 mv dist/dev.html index.html
 mv dist/assets* assets
