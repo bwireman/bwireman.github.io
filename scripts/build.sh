@@ -7,7 +7,7 @@ npm upgrade
 npm audit
 npm run format
 npm run lint
-# includes a call to `yarn vite build`
+# includes a call to `npx vite build`
 npm run test
 
 mv dist/dev.html index.html
