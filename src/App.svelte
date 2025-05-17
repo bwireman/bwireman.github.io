@@ -25,7 +25,7 @@
   let showRipple = $state(false)
 
   onMount(async () => {
-    // force scroll to top on reload
+    // ? force scroll to top on reload
     window.onbeforeunload = () => {
       window.scrollTo(0, 0)
     }
@@ -94,11 +94,11 @@
         company="Splunk"
         roles={[
           {
-            title: "Senior Software Engineer",
+            title: "Software Engineering Technical Leader",
             span: "April 2024 - Now"
           }
         ]}
-        description="Working to improve Splunk Cloud infrastructure & reliability."
+        description="Writing golang microservices to improve infrastructure management in Splunk Cloud."
       />
 
       <br />
@@ -233,12 +233,12 @@
         packageName="go_over"
         hex={true}
         packageUrl="https://hex.pm/packages/go_over/"
-        starCountFallback={1}
+        starCountFallback={17}
         header={false}
         language={{name: "gleam", register: gleam}}
         snippet="main/src/go_over/util/cache.gleam"
-        snippetStart={625}
-        snippetEnd={1500}
+        snippetStart={727}
+        snippetEnd={1677}
       />
 
       <br />
@@ -266,7 +266,7 @@
         repo="cactus"
         hex={true}
         packageUrl="https://hex.pm/packages/cactus/"
-        starCountFallback={5}
+        starCountFallback={15}
         language={{name: "gleam", register: gleam}}
         snippet="main/src/cactus/write.gleam"
         header={false}
@@ -281,7 +281,7 @@
         description="Protobuf support for Gleam ✨, written in GO"
         lang="golang"
         repo="gleam_pb"
-        starCountFallback={14}
+        starCountFallback={25}
         language={go}
         snippetStart={92}
         snippetEnd={465}

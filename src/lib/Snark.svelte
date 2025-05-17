@@ -29,25 +29,33 @@
   }
 
   const rules = {
-    dwell: {duration: 0.8, percentage: 50, fn: onViewEmoji, repeat: true}
+    dwell: {duration: 0.8, percentage: 35, fn: onViewEmoji, repeat: true}
   }
 </script>
 
 <Viewable {rules} element={emojiElement}>
   <div class="columns is-centered">
-    <div bind:this={emojiElement} class="column is-one-fifth" style="text-align: center; padding: 1rem;">
+    <div bind:this={emojiElement} class="column is-one-fifth" style="padding: 1rem;">
       {#if lvl > 0}
-        <p style="font-size: 3.5rem" class="snark">{emoji}</p>
-      {/if}
-      {#if lvl > 1}
+        <p class="emoji snark">{emoji}</p>
+        <br />
+        <br />
         <div class="chatbox">
           <p class="name">{name}</p>
-          <p class="snark">{firstMessage}</p>
+          {#if lvl > 1}
+            <p class="text snark">{firstMessage}</p>
+          {:else}
+            <br />
+          {/if}
           {#if lvl > 2}
-            <p class="snark">{midMessage}</p>
+            <p class="text snark">{midMessage}</p>
+          {:else}
+            <br />
           {/if}
           {#if lvl > 3}
-            <p class="snark">{endMessage}</p>
+            <p class="text snark">{endMessage}</p>
+          {:else}
+            <br />
           {/if}
         </div>
       {/if}
@@ -69,13 +77,36 @@
     background-color: #2e333d;
   }
 
-  .chatbox > .name {
+  .chatbox .name {
     float: right;
     text-align: center;
     position: relative;
     top: -1.5rem;
     color: whitesmoke;
     background-color: #61656e;
+    max-width: fit-content;
+    padding: 0rem 0.25rem 0rem 0.25rem;
+    border-radius: 0.25rem;
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  .text {
+    text-align: center;
+    max-width: fit-content;
+    font-family: "JetBrains Mono", monospace;
+  }
+
+  .emoji {
+    float: left;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    top: 0.75rem;
+    left: 0.5rem;
+    color: whitesmoke;
+    border-style: solid;
+    border-color: #61656e;
+    background-color: #2e333d;
     max-width: fit-content;
     padding: 0rem 0.25rem 0rem 0.25rem;
     border-radius: 0.25rem;
