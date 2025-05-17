@@ -237,7 +237,7 @@
         header={false}
         language={{name: "gleam", register: gleam}}
         snippet="main/src/go_over/util/cache.gleam"
-        snippetStart={727}
+        snippetStart={34}
         snippetEnd={1677}
       />
 
@@ -253,8 +253,8 @@
         starCountFallback={3}
         language={elixir}
         snippet="main/lib/dreamy/monodic.ex"
-        snippetStart={1355}
-        snippetEnd={1721}
+        snippetStart={52}
+        snippetEnd={62}
       />
 
       <br />
@@ -270,8 +270,8 @@
         language={{name: "gleam", register: gleam}}
         snippet="main/src/cactus/write.gleam"
         header={false}
-        snippetStart={1069}
-        snippetEnd={1742}
+        snippetStart={44}
+        snippetEnd={83}
       />
 
       <br />
@@ -283,8 +283,8 @@
         repo="gleam_pb"
         starCountFallback={25}
         language={go}
-        snippetStart={92}
-        snippetEnd={465}
+        snippetStart={12}
+        snippetEnd={41}
         snippet="main/pkg/gleam/gpb.go"
       />
     </section>
