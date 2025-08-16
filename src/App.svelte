@@ -11,7 +11,7 @@
   import {onMount} from "svelte"
   import {getRepos, repos} from "./stores/hub"
   import theme from "svelte-highlight/styles/stackoverflow-dark"
-  import {go, elixir} from "svelte-highlight/languages"
+  import {elixir} from "svelte-highlight/languages"
   import gleam from "@gleam-lang/highlight.js-gleam"
   import Project from "./lib/Project.svelte"
   import Skills from "./lib/Skills.svelte"
@@ -207,7 +207,7 @@
           {icon: "fa-solid fa-cloud", name: "Google Cloud Platform"},
           {icon: "fa-solid fa-cloud", name: "GCP Pub Sub"},
           {icon: "fa-solid fa-cloud", name: "Terraform"},
-          {icon: "fa-solid fa-server", name: "ElasticSearch"},
+          {icon: "fa-solid fa-database", name: "ElasticSearch"},
           {icon: "fa-solid fa-angles-right", name: "Apache Beam"},
           {icon: "fa-solid fa-angles-right", name: "Apache Airflow"},
           {icon: "fa-solid fa-terminal", name: "Docker"},
@@ -218,7 +218,8 @@
           {icon: "fa-solid fa-vector-square", name: "GRPC"},
           {icon: "fa-solid fa-database", name: "Postgres"},
           {icon: "fa-solid fa-database", name: "Big Query"},
-          {icon: "fa-solid fa-database", name: "Redis"}
+          {icon: "fa-solid fa-database", name: "Redis"},
+          {icon: "fa-solid fa-database", name: "Splunk"}
         ]}
       />
       <h1 class="title">
@@ -277,15 +278,18 @@
       <br />
 
       <Project
-        title="gleam_pb"
-        description="Protobuf support for Gleam ✨, written in GO"
-        lang="golang"
-        repo="gleam_pb"
-        starCountFallback={25}
-        language={go}
-        snippetStart={12}
-        snippetEnd={41}
-        snippet="main/pkg/gleam/gpb.go"
+        title="📖 testament"
+        description="Doc tests for Gleam ✨"
+        lang="gleam"
+        repo="testament"
+        starCountFallback={4}
+        header={false}
+        hex={true}
+        language={{name: "gleam", register: gleam}}
+        packageUrl="https://hex.pm/packages/testament/"
+        snippetStart={165}
+        snippetEnd={199}
+        snippet="main/src/testament/internal/util.gleam"
       />
     </section>
   </div>
