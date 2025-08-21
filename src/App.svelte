@@ -282,14 +282,14 @@
         description="Doc tests for Gleam ✨"
         lang="gleam"
         repo="testament"
-        starCountFallback={4}
+        starCountFallback={5}
         header={false}
         hex={true}
         language={{name: "gleam", register: gleam}}
         packageUrl="https://hex.pm/packages/testament/"
-        snippetStart={165}
-        snippetEnd={199}
-        snippet="main/src/testament/internal/util.gleam"
+        snippetStart={46}
+        snippetEnd={69}
+        snippet="main/src/testament/internal/parse.gleam#L47-L70"
       />
     </section>
   </div>
