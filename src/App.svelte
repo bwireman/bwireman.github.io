@@ -16,13 +16,9 @@
   import Project from "./lib/Project.svelte"
   import Skills from "./lib/Skills.svelte"
   import Experience from "./lib/Experience.svelte"
-  import Ripple from "./lib/Ripple.svelte"
   import Using from "./lib/using.svelte"
   import {UAParser} from "ua-parser-js"
   import {general} from "./stores/general"
-  import Snark from "./lib/Snark.svelte"
-
-  let showRipple = $state(false)
 
   onMount(async () => {
     // ? force scroll to top on reload
@@ -32,7 +28,6 @@
 
     const parserResults = new UAParser(window.navigator.userAgent).getResult()
     general.set({isMobile: parserResults.device.type === "mobile"})
-    setTimeout(() => (showRipple = true), 500)
     const reposPromise = getRepos("bwireman")
     repos.set(await reposPromise)
   })
@@ -295,7 +290,6 @@
   </div>
 </div>
 <footer class="footer" style="margin: 0.1rem; padding: 0.1rem;">
-  <Snark />
   <div class="built content">
     Built using
     <Using name="Svelte" link="https://svelte.dev/" image={svelte} />,
@@ -303,10 +297,6 @@
     <Using name="Bulma" link="https://bulma.io/" image={bulma} />
   </div>
 </footer>
-
-{#if showRipple}
-  <Ripple />
-{/if}
 
 <style lang="scss">
   .built {
