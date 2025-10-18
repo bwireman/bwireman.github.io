@@ -86,11 +86,24 @@
       </h1>
 
       <Experience
+        company="Alertmedia"
+        roles={[
+          {
+            title: "Senior Software Engineer",
+            span: "October 2025 - Now"
+          }
+        ]}
+        description=""
+      />
+
+      <br />
+
+      <Experience
         company="Splunk"
         roles={[
           {
             title: "Software Engineering Technical Leader",
-            span: "April 2024 - Now"
+            span: "April 2024 - October 2025"
           }
         ]}
         description="Writing golang microservices to improve infrastructure management in Splunk Cloud."
