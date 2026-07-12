@@ -11,7 +11,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   webServer: {
-    command: "npx vite build && npm run preview",
+    command: "yarn vite build && yarn preview",
     port: 4173
   },
   testDir: './tests',

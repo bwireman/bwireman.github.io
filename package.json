@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "yarn@4.17.1+sha512.ccbfabf7d7b6b32075088be9386fb9a2e00bb6887ef07fa56effabc890a56d53da1ccc4128d62db245fcbd3961b236d75335bdf7d5320ed6eafb7588b7ad4697",
   "scripts": {
     "dev": "rm -f index.html && vite",
     "build": "./scripts/build.sh",
@@ -13,7 +14,7 @@
     "test": "playwright test",
     "prepare": "husky",
     "dl-resume": "./scripts/dl-resume.sh",
-    "update": "npm upgrade"
+    "update": "yarn up"
   },
   "prettier": {
     "arrowParens": "avoid",

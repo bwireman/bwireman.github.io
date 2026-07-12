@@ -93,7 +93,7 @@
             span: "October 2025 - Now"
           }
         ]}
-        description=""
+        description="Developing and Deploying AI agents for our products"
       />
 
       <br />
@@ -207,9 +207,9 @@
       <Skills
         skills={[
           {icon: "fa-solid fa-server", name: "Django & Django Rest Framework"},
+          {icon: "fa-solid fa-dna", name: "Strands"},
           {icon: "fa-solid fa-server", name: "Phoenix"},
           {icon: "fa-brands fa-js", name: "React"},
-          {icon: "fa-brands fa-js", name: "Svelte"},
           {icon: "fa-solid fa-cloud", name: "Kubernetes"},
           {icon: "fa-solid fa-cloud", name: "AWS"},
           {icon: "fa-solid fa-cloud", name: "Google Cloud Platform"},

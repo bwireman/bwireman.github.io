@@ -3,12 +3,12 @@ set -ex
 
 rm -rf index.html dist assets
 
-npm upgrade
-npm audit
-npm run format
-npm run lint
-# includes a call to `npx vite build`
-npm run test
+yarn up
+yarn npm audit
+yarn format
+yarn lint
+# includes a call to `yarn vite build`
+yarn test
 
 mv dist/dev.html index.html
 mv dist/assets* assets

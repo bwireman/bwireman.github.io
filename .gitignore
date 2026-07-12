@@ -2,6 +2,13 @@ _site/
 Gen-index.md
 .vscode
 node_modules/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
 .vite
 dist
 yarn-error.log
