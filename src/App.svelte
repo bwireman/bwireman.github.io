@@ -12,7 +12,10 @@
   import {getRepos, repos} from "./stores/hub"
   import theme from "svelte-highlight/styles/stackoverflow-dark"
   import {elixir} from "svelte-highlight/languages"
-  import gleam from "@gleam-lang/highlight.js-gleam"
+  import gleamGrammar from "@gleam-lang/highlight.js-gleam"
+  import {fromHighlightJs} from "svelte-highlight/compat"
+
+  const gleamLanguage = fromHighlightJs("gleam", gleamGrammar)
   import Project from "./lib/Project.svelte"
   import Skills from "./lib/Skills.svelte"
   import Experience from "./lib/Experience.svelte"
@@ -238,21 +241,23 @@
         <span class="icon is-large has-text-dark"><i class="fas fa-code-branch"></i></span>
         Personal Projects
       </h1>
-      <Project
-        title="🕵️‍♂️ go-over"
-        description="A tool to audit Erlang & Elixir dependencies, to make sure your ✨ gleam projects really sparkle!"
-        lang="gleam"
-        repo="go-over"
-        packageName="go_over"
-        hex={true}
-        packageUrl="https://hex.pm/packages/go_over/"
-        starCountFallback={17}
-        header={false}
-        language={{name: "gleam", register: gleam}}
-        snippet="main/src/go_over/util/cache.gleam"
-        snippetStart={34}
-        snippetEnd={1677}
-      />
+      {#await gleamLanguage then gleam}
+        <Project
+          title="🕵️‍♂️ go-over"
+          description="A tool to audit Erlang & Elixir dependencies, to make sure your ✨ gleam projects really sparkle!"
+          lang="gleam"
+          repo="go-over"
+          packageName="go_over"
+          hex={true}
+          packageUrl="https://hex.pm/packages/go_over/"
+          starCountFallback={17}
+          header={false}
+          language={gleam}
+          snippet="main/src/go_over/util/cache.gleam"
+          snippetStart={34}
+          snippetEnd={1677}
+        />
+      {/await}
 
       <br />
 
@@ -272,37 +277,41 @@
 
       <br />
 
-      <Project
-        title="🌵 cactus"
-        description="A tool for managing git lifecycle hooks with ✨ gleam! Pre commit, Pre push and more!"
-        lang="gleam"
-        repo="cactus"
-        hex={true}
-        packageUrl="https://hex.pm/packages/cactus/"
-        starCountFallback={15}
-        language={{name: "gleam", register: gleam}}
-        snippet="main/src/cactus/write.gleam"
-        header={false}
-        snippetStart={44}
-        snippetEnd={83}
-      />
+      {#await gleamLanguage then gleam}
+        <Project
+          title="🌵 cactus"
+          description="A tool for managing git lifecycle hooks with ✨ gleam! Pre commit, Pre push and more!"
+          lang="gleam"
+          repo="cactus"
+          hex={true}
+          packageUrl="https://hex.pm/packages/cactus/"
+          starCountFallback={15}
+          language={gleam}
+          snippet="main/src/cactus/write.gleam"
+          header={false}
+          snippetStart={44}
+          snippetEnd={83}
+        />
+      {/await}
 
       <br />
 
-      <Project
-        title="📖 testament"
-        description="Doc tests for Gleam ✨"
-        lang="gleam"
-        repo="testament"
-        starCountFallback={5}
-        header={false}
-        hex={true}
-        language={{name: "gleam", register: gleam}}
-        packageUrl="https://hex.pm/packages/testament/"
-        snippetStart={46}
-        snippetEnd={69}
-        snippet="main/src/testament/internal/parse.gleam#L47-L70"
-      />
+      {#await gleamLanguage then gleam}
+        <Project
+          title="📖 testament"
+          description="Doc tests for Gleam ✨"
+          lang="gleam"
+          repo="testament"
+          starCountFallback={5}
+          header={false}
+          hex={true}
+          language={gleam}
+          packageUrl="https://hex.pm/packages/testament/"
+          snippetStart={46}
+          snippetEnd={69}
+          snippet="main/src/testament/internal/parse.gleam#L47-L70"
+        />
+      {/await}
     </section>
   </div>
 </div>

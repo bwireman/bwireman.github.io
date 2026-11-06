@@ -1,52 +1,38 @@
-import typescriptEslint from "@typescript-eslint/eslint-plugin";
-import globals from "globals";
-import tsParser from "@typescript-eslint/parser";
-import parser from "svelte-eslint-parser";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
+import typescriptEslint from "typescript-eslint"
+import globals from "globals"
+import parser from "svelte-eslint-parser"
+import js from "@eslint/js"
+import eslintConfigPrettier from "eslint-config-prettier"
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-    baseDirectory: __dirname,
-    recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
-});
-
-export default [{
-    ignores: ["**/*.cjs"],
-}, ...compat.extends("eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"), {
-    plugins: {
-        "@typescript-eslint": typescriptEslint,
-    },
+export default typescriptEslint.config(
+  {
+    ignores: ["**/*.cjs"]
+  },
+  js.configs.recommended,
+  typescriptEslint.configs.recommended,
+  {
     languageOptions: {
-        globals: {
-            ...globals.browser,
-        },
-
-        parser: tsParser,
-        ecmaVersion: 2020,
-        sourceType: "module",
-
-        parserOptions: {
-            project: "./tsconfig.json",
-            extraFileExtensions: [".svelte"],
-        },
-    },
-
-    settings: {},
-}, {
+      globals: {
+        ...globals.browser
+      },
+      ecmaVersion: 2020,
+      sourceType: "module",
+      parserOptions: {
+        project: "./tsconfig.json",
+        extraFileExtensions: [".svelte"]
+      }
+    }
+  },
+  {
     files: ["**/*.svelte"],
-
     languageOptions: {
-        parser: parser,
-        ecmaVersion: 5,
-        sourceType: "script",
-
-        parserOptions: {
-            parser: "@typescript-eslint/parser",
-        },
-    },
-}];
+      parser,
+      ecmaVersion: 5,
+      sourceType: "script",
+      parserOptions: {
+        parser: typescriptEslint.parser
+      }
+    }
+  },
+  eslintConfigPrettier
+)
