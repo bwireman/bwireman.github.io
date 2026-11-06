@@ -89,8 +89,12 @@
         company="Alertmedia"
         roles={[
           {
+            title: "Software Engineering Manager",
+            span: "November 2026 - Now"
+          },
+          {
             title: "Senior Software Engineer",
-            span: "October 2025 - Now"
+            span: "October 2025 - November 2026"
           }
         ]}
         description="Developing and Deploying AI agents for our products"
