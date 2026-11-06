@@ -127,3 +127,40 @@ pre {
   animation-duration: 800ms;
   padding-bottom: .1rem;
 }
+
+.earlier-experience {
+  summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.85rem 1.25rem;
+    border: 1px solid #dbdbdb;
+    border-radius: 0.375rem;
+    background: white;
+    color: $dark;
+    font-weight: 600;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::marker {
+      content: "";
+    }
+
+    .fa-chevron-down {
+      transition: transform 0.2s ease;
+    }
+  }
+
+  &[open] summary .fa-chevron-down {
+    transform: rotate(180deg);
+  }
+
+  .earlier-experience-body {
+    margin-top: 1rem;
+  }
+}

@@ -165,29 +165,37 @@
 
       <br />
 
-      <Experience
-        company="Bank Of America"
-        roles={[
-          {
-            title: "Global Markets Operations Technology Intern",
-            span: "June 2018 - August 2018"
-          }
-        ]}
-        description="I used 'sci-kit learn' to help develop machine learning models, & worked to develop tools to more easily get models trained in the future."
-      />
+      <details class="earlier-experience">
+        <summary>
+          <span>Earlier experience</span>
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </summary>
+        <div class="earlier-experience-body">
+          <Experience
+            company="Bank Of America"
+            roles={[
+              {
+                title: "Global Markets Operations Technology Intern",
+                span: "June 2018 - August 2018"
+              }
+            ]}
+            description="I used 'sci-kit learn' to help develop machine learning models, & worked to develop tools to more easily get models trained in the future."
+          />
 
-      <br />
+          <br />
 
-      <Experience
-        company="Tyler Technologies, Courts & Justice"
-        roles={[
-          {
-            title: "Development Intern",
-            span: "June 2017 - August 2017"
-          }
-        ]}
-        description="Helped to rebuild the company's internal project tracking site, using .NET, Angular.JS & Elasticsearch."
-      />
+          <Experience
+            company="Tyler Technologies, Courts & Justice"
+            roles={[
+              {
+                title: "Development Intern",
+                span: "June 2017 - August 2017"
+              }
+            ]}
+            description="Helped to rebuild the company's internal project tracking site, using .NET, Angular.JS & Elasticsearch."
+          />
+        </div>
+      </details>
     </section>
   </div>
 
